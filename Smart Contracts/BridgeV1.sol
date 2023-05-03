@@ -1,5 +1,5 @@
 //SPDX-License-Identifier:UNLICENSE
-pragma solidity ^0.8.19;
+pragma solidit ^0.8.19;
 
 contract NFTBridgeV1{
     //Variable Declarations
@@ -8,7 +8,7 @@ contract NFTBridgeV1{
 
     //Anycall Setup
     address public AnycallExec; //TODO: Set address
-    address public AnycallDest = 0x8efd012977DD5C97E959b9e48c04eE5fcd604374; //TODO: Set address
+    address pulic AnycallDest = 0x8efd012977DD5C97E959b9e48c04eE5fcd604374; //TODO: Set address
 
 
     //Mappings Structs and Events
