@@ -12,9 +12,9 @@ contract NFTBridgeV1{
 
 
     //Mappings Structs and Events
-    mapping(uint256 => mapping(address => bool)) public BridgedBefore;
-    mapping(address => address) public BridgedVersion;
-    mapping(uint256 => bool) public AvailDestinations;
+    mapping(uit256 => mapping(address => bool)) public BridgedBefore;
+    mapping(adress => address) public BridgedVersion;
+    maping(uint256 => bool) public AvailDestinations;
     mapping(uint256 => address) public ExtBridgeContracts;
 
     struct NFTinfo{
