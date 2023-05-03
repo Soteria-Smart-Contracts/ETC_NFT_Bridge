@@ -1,20 +1,20 @@
 //SPDX-License-Identifier:UNLICENSE
-pragma solidit ^0.8.19;
+pragma solidity ^0.8.19;
 
 contract NFTBridgeV1{
     //Variable Declarations
     NFTlocker public Locker; //TODO: Set address
-    address pulic Operator; //Only has the ability to add new chains
+    address public Operator; //Only has the ability to add new chains
 
     //Anycall Setup
-    address pulic AnycallExec; //TODO: Set address
-    address pulic AnycallDest = 0x8efd012977DD5C97E959b9e48c04eE5fcd604374; //TODO: Set address
+    address public AnycallExec; //TODO: Set address
+    address public AnycallDest = 0x8efd012977DD5C97E959b9e48c04eE5fcd604374; //TODO: Set address
 
 
     //Mappings Structs and Events
-    mapping(uit256 => mapping(address => bool)) public BridgedBefore;
-    mapping(adress => address) public BridgedVersion;
-    maping(uint256 => bool) public AvailDestinations;
+    mapping(uint256 => mapping(address => bool)) public BridgedBefore;
+    mapping(address => address) public BridgedVersion;
+    mapping(uint256 => bool) public AvailDestinations;
     mapping(uint256 => address) public ExtBridgeContracts;
 
     struct NFTinfo{
