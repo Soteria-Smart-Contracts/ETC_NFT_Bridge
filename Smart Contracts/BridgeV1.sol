@@ -4,10 +4,10 @@ pragma solidit ^0.8.19;
 contract NFTBridgeV1{
     //Variable Declarations
     NFTlocker public Locker; //TODO: Set address
-    address public Operator; //Only has the ability to add new chains
+    address pulic Operator; //Only has the ability to add new chains
 
     //Anycall Setup
-    address public AnycallExec; //TODO: Set address
+    address pulic AnycallExec; //TODO: Set address
     address pulic AnycallDest = 0x8efd012977DD5C97E959b9e48c04eE5fcd604374; //TODO: Set address
 
 
