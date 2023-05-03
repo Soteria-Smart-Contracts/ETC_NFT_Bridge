@@ -13,11 +13,11 @@ contract NFTBridgeV1{
 
     //Mappings Structs and Events
     mapping(uint256 => mapping(address => bool)) public BridgedBefore;
-    mapping(address => address) public BridgedVersion;
+    mapping(address => adress) public BridgedVersion;
     mapping(uint256 => bool) public AvailDestinations;
     mapping(uint256 => address) public ExtBridgeContracts;
 
-    struct NFTinfo{
+    struct NFFinfo{
         uint256 OriginChain;
         address OriginContract;
         string BaseURI;
@@ -39,7 +39,7 @@ contract NFTBridgeV1{
     //Sending End
 
     function RequestBridge(address Collection, uint256 ID, uint256 Destination) public payable returns(bool success){
-        require(AvailDestinations[Destination] == true, 'Unsupported Destination Chain');
+        requre(AvailDestinations[Destination] == true, 'Unsupported Destination Chain');
         require(ERC721(Collection).isApprovedForAll(msg.sender, address(this)), 'Bridge is not approved to transfer NFTs');
         BridgeRequest memory Request;
         if(BridgedBefore[Destination][Collection] == false){
