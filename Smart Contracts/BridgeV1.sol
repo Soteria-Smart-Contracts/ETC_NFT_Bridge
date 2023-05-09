@@ -6,8 +6,8 @@ contract NFTBridgeV1{
     address public Operator = msg.sender; //Only has the ability to add new chains
 
     //Anycall Setup
-    address public AnycallExec = AnyCall(AnycallDest).executor(); //TODO: Set address
-    address public AnycallDest = 0x8efd012977DD5C97E959b9e48c04eE5fcd604374; //TODO: Set address
+    address public AnycallExec = AnyCall(AnycallDest).executor();
+    address public AnycallDest = 0x8efd012977DD5C97E959b9e48c04eE5fcd604374;
 
 
     //Mappings Structs and Events
