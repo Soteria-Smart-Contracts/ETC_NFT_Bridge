@@ -3,18 +3,20 @@ pragma solidity ^0.8.19;
 
 contract NFTBridgeV1{
     //Variable Declarations
-    NFTlocker public Locker; //TODO: Set address
-    address public Operator; //Only has the ability to add new chains
+    address public Operator = msg.sender; //Only has the ability to add new chains
 
     //Anycall Setup
-    address public AnycallExec; //TODO: Set address
+    address public AnycallExec = AnyCall(AnycallDest).executor(); //TODO: Set address
     address public AnycallDest = 0x8efd012977DD5C97E959b9e48c04eE5fcd604374; //TODO: Set address
 
 
     //Mappings Structs and Events
     mapping(uint256 => mapping(address => bool)) public BridgedBefore;
     mapping(address => address) public BridgedVersion;
-    mapping(uint256 => bool) public AvailDestinations;
+    mapping(address => NFTinfo) public SourceChainVersion;
+    mapping(address => bool) public IsBridgeContract;
+    mapping(address => bool) public IsSourceContract;
+    mapping(uint256 => bool) public AvailDestinations; //TODO: Populate
     mapping(uint256 => address) public ExtBridgeContracts;
 
     struct NFTinfo{
@@ -22,6 +24,8 @@ contract NFTBridgeV1{
         address OriginContract;
         string BaseURI;
         string baseExtension;
+        string Name;
+        string Symbol;
     }
     NFTinfo internal Empty;
 
@@ -29,41 +33,99 @@ contract NFTBridgeV1{
         uint256 ID;
         address Collection;
         address Sender;
-        uint256 SourceChain;
+        uint256 DepartureChain;
         NFTinfo Information;
     }
+    NFTinfo internal EmptyBR;
 
+    //TODO: Create Events
     event ExcessGasRefunded();
-
 
     //Sending End
 
-    function RequestBridge(address Collection, uint256 ID, uint256 Destination) public payable returns(bool success){
+    function BridgeSend(address Collection, uint256 ID, uint256 Destination) public payable returns(bool success){
         require(AvailDestinations[Destination] == true, 'Unsupported Destination Chain');
         require(ERC721(Collection).isApprovedForAll(msg.sender, address(this)), 'Bridge is not approved to transfer NFTs');
-        BridgeRequest memory Request;
-        if(BridgedBefore[Destination][Collection] == false){
-            NFTinfo memory Info = NFTinfo(block.chainid, Collection, ERC721(Collection).baseURI(), ERC721(Collection).baseExtension());
-            Request = BridgeRequest(ID, Collection, msg.sender, block.chainid, Info);
+
+        if(IsBridgeContract[Collection] == false && IsSourceContract[Collection] == false){
+          IsSourceContract[Collection] = true;
         }
-        else{
+
+        BridgeRequest memory Request;
+        if(BridgedBefore[Destination][Collection] == false && IsSourceContract[Collection] == true){
+            BridgeNFT(Collection).transferFrom(msg.sender, address(this), ID);
+            NFTinfo memory Info = NFTinfo(block.chainid, Collection, BridgeNFT(Collection).baseURI(), BridgeNFT(Collection).baseExtension(), BridgeNFT(Collection).name(), BridgeNFT(Collection).symbol());
+            Request = BridgeRequest(ID, Collection, msg.sender, block.chainid, Info);
+            BridgedBefore[Destination][Collection] = true;
+        }
+        else if(BridgedBefore[Destination][Collection] == false && IsBridgeContract[Collection] == true){
+            BridgeNFT(Collection).Burn(ID);
+            Request = BridgeRequest(ID, SourceChainVersion[Collection].OriginContract, msg.sender, block.chainid, SourceChainVersion[Collection]);
+            BridgedBefore[Destination][Collection] = true;
+        }
+        else if(BridgedBefore[Destination][Collection] == true && IsBridgeContract[Collection] == true){
+            BridgeNFT(Collection).Burn(ID);
+            Request = BridgeRequest(ID, SourceChainVersion[Collection].OriginContract, msg.sender, block.chainid, Empty);
+        }
+        else if(BridgedBefore[Destination][Collection] == true && IsSourceContract[Collection] == true){
+            BridgeNFT(Collection).transferFrom(msg.sender, address(this), ID);
             Request = BridgeRequest(ID, Collection, msg.sender, block.chainid, Empty);
         }
+        else{
+          revert('Unable to Bridge NFT, contact operator');
+        }
+
         AnyCall(AnycallDest).anyCall{value: msg.value}(ExtBridgeContracts[Destination], abi.encode(Request), Destination, 0, '');
+
+        return(success);
     }
     
-    //Receiving End
+    // Receiving End
 
+    function BridgeReceive(BridgeRequest memory Request) internal {
+        if(BridgedVersion[Request.Collection] == address(0) && IsSourceContract[Request.Collection] == false){
+            address BridgedContract = CreateNewERC721(Request.Information.BaseURI, Request.Information.baseExtension, Request.Information.Name, Request.Information.Symbol);
+            BridgedVersion[Request.Collection] = BridgedContract;
+            SourceChainVersion[BridgedContract] = Request.Information;
+            IsBridgeContract[BridgedContract] = true;
+            BridgedBefore[Request.DepartureChain][Request.Collection] = true;
+            BridgeNFT(BridgedContract).Mint(Request.ID, Request.Sender);
+        }
+        else if(BridgedVersion[Request.Collection] == address(0) && IsSourceContract[Request.Collection] == true){
+            BridgeNFT(Request.Collection).transferFrom(address(this), Request.Sender, Request.ID);
+        }
+        else if(BridgedVersion[Request.Collection] != address(0)){
+            BridgeNFT(Request.Collection).Mint(Request.ID, Request.Sender);
+        }
+    }
 
-    
+    //Operator Only
 
+    function AddNewBridgeChain(uint256 ChainID, address BridgeContract) public returns(bool success){
+        require(msg.sender == Operator);
 
+        AvailDestinations[ChainID] = true;
+        ExtBridgeContracts[ChainID] = BridgeContract;
 
-    // function anyExecute(bytes calldata data) external returns(bool success, bytes memory result){
+        return(success);
+    }
+
+    //Internals
+
+    function CreateNewERC721(string memory URI, string memory Ext, string memory Name, string memory Symbol) internal returns(address NewContract){
+        address NewERC721 = address(new BridgeNFT(URI,Ext,Name,Symbol));
         
+        return(NewERC721);
+    }
 
-    //     return(true, '');
-    // }
+
+    function anyExecute(bytes calldata data) external returns(bool success, bytes memory result){
+         require(msg.sender == AnycallExec);
+
+         BridgeReceive(abi.decode(data, (BridgeRequest)));
+
+         return(true, '');
+    }
 
     receive() external payable{
         emit ExcessGasRefunded();
@@ -74,20 +136,69 @@ contract NFTBridgeV1{
 
 
 
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract BridgeNFT is ERC721Enumerable, Ownable {
+  using Strings for uint256;
+
+  string public baseURI;
+  string public baseExtension;
+
+
+  constructor(string memory URI, string memory Ext, string memory Name, string memory Symbol) ERC721(Name, Symbol) {
+    baseURI = URI;
+    baseExtension = Ext;
+  }
+
+  // internal
+  function _baseURI() internal view virtual override returns (string memory) {
+    return baseURI;
+  }
+
+  // public
+  function Mint(uint256 ID, address to) external onlyOwner {
+    _safeMint(to, ID);
+  }
+  
+  function Burn(uint256 ID) external onlyOwner {
+    _burn(ID);
+  }
+
+  function walletOfOwner(address _owner)
+    public
+    view
+    returns (uint256[] memory)
+  {
+    uint256 ownerTokenCount = balanceOf(_owner);
+    uint256[] memory tokenIds = new uint256[](ownerTokenCount);
+    for (uint256 i; i < ownerTokenCount; i++) {
+      tokenIds[i] = tokenOfOwnerByIndex(_owner, i);
+    }
+    return tokenIds;
+  }
+
+  function tokenURI(uint256 tokenId)
+    public
+    view
+    virtual
+    override
+    returns (string memory)
+  {
+    require(
+      _exists(tokenId),
+      "ERC721Metadata: URI query for nonexistent token"
+    );
+
+    string memory currentBaseURI = _baseURI();
+    return bytes(currentBaseURI).length > 0
+        ? string(abi.encodePacked(currentBaseURI, tokenId.toString(), baseExtension))
+        : "";
+  }
+}
+
 interface AnyCall {
     function anyCall(address _to, bytes calldata _data, uint256 _toChainID, uint256 _flags, bytes calldata) external payable;
     function anyExecute(bytes calldata data) external returns (bool success, bytes memory result);
-}
-
-interface ERC721{
-    function transferFrom(address from,address to,uint256 tokenId) external;
-    function baseURI() external view returns(string memory);
-    function baseExtension() external view returns(string memory);
-    function safeTransferFrom(address from, address to, uint256 tokenId) external;
-    function ownerOf(uint256 _tokenId) external view returns (address);
-    function isApprovedForAll(address _owner, address _operator) external view returns (bool);
-}
-
-interface NFTlocker {
-    
+    function executor() external view returns (address executor);
 }
