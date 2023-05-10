@@ -40,7 +40,6 @@ contract NFTBridgeV1{
     }
     NFTinfo internal EmptyBR;
 
-    //TODO: Create Events
     event ExcessGasRefunded();
     event ERC721BridgeDeparture(address Collection, uint256 ID, uint256 DestinationID, address user);
     event ERC721BridgeArrival(address SourceCollection, uint256 ID, uint256 DepartureID, address user);
