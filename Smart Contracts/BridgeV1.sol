@@ -6,8 +6,8 @@ contract NFTBridgeV1{
     address public Operator = msg.sender; //Only has the ability to add new chains
 
     //Anycall Setup
-    address public AnycallExec = AnyCall(AnycallDest).executor(); //TODO: Set address
-    address public AnycallDest = 0x965f84D915a9eFa2dD81b653e3AE736555d945f4; //TODO: Set address
+    address public AnycallExec = AnyCall(AnycallDest).executor();
+    address public AnycallDest = 0x965f84D915a9eFa2dD81b653e3AE736555d945f4;
 
     //Create all bridged NFT list for frontend
     address[] public BridgedERC721s;
@@ -18,7 +18,7 @@ contract NFTBridgeV1{
     mapping(address => NFTinfo) public SourceChainVersion;
     mapping(address => bool) public IsBridgeContract;
     mapping(address => bool) public IsSourceContract;
-    mapping(uint256 => bool) public AvailDestinations; //TODO: Populate
+    mapping(uint256 => bool) public AvailDestinations;
     mapping(uint256 => address) public ExtBridgeContracts;
 
     struct NFTinfo{
