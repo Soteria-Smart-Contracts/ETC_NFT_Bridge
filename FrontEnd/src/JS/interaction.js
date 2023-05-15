@@ -34,7 +34,7 @@ async function getID(){
 }
 
 async function SwitchChainHeader(ChainID){
-    ChainText.innerText = Chainlist.find(Compare).Name + toString(ChainID);
+    ChainText.innerText = window.Chainlist.find(Compare).Name + toString(ChainID);
 }
 
 async function Compare(ChainID){
