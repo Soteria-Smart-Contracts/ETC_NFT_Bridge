@@ -41,9 +41,7 @@ async function SwitchChainHeader(){
     if(netID === 61){
         ChainText.innerText = " Ethereum Classic - ID 61"
     }
-    else{
-        ChainText.innerText = " Unkown - ID " + netID;
-    }
+    
 }
 
 // async function CreateETCProp(){
