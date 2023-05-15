@@ -35,7 +35,10 @@ async function getID(){
 
 async function SwitchChainHeader(ChainID){
     if(netID == 5){
-        ChainText.innerText = 
+        ChainText.innerText = "Goerli - 5"
+    }
+    if(netID == 5){
+        ChainText.innerText = "Goerli - 5"
     }
 }
 
