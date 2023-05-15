@@ -414,3 +414,7 @@ window.abi = [
 		"type": "receive"
 	}
 ]
+
+window.ChainList{
+    
+}
