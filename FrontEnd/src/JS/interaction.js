@@ -6,7 +6,7 @@ let account;
 let netID;
 let LoggedIn = false;
 
-let ChainText = document.getElementById('Ticker')
+let ChainText = document.getElementById('Ticker');
 
 loginWithEth();
 
@@ -34,7 +34,7 @@ async function getID(){
 }
 
 async function SwitchChainHeader(ChainID){
-    
+    Chai
 }
 
 async function Compare(ChainID){
