@@ -42,7 +42,7 @@ async function SwitchChainHeader(){
         ChainText.innerText = " Ethereum Classic - ID 61"
     }
     else{
-        ChainText.innerText = " Ethereum Classic - ID 61"
+        ChainText.innerText = " children"
     }
     
 }
