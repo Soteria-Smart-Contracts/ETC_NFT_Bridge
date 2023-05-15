@@ -33,6 +33,7 @@ async function getID(){
 
 async function SwitchChainHeader(ChainID){
     Name = Chainlist.ChainID === ChainID;
+    netID
 }
 
 // async function CreateETCProp(){
