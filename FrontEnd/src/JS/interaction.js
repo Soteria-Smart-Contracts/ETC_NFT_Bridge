@@ -8,7 +8,9 @@ let LoggedIn = false;
 
 let ChainText = document.getElementById('Ticker');
 
-loginWithEth();
+loginWithEth(); 
+
+//DONT FORGOT TRY MULTICHAIN API???
 
 async function loginWithEth(){
     if(LoggedIn == false){
