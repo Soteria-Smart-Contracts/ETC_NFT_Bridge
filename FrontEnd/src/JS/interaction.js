@@ -6,7 +6,7 @@ let account;
 let netID;
 let LoggedIn = false;
 
-let ChainText = document.getElementById()
+let ChainText = document.getElementById('Ticker')
 
 loginWithEth();
 
