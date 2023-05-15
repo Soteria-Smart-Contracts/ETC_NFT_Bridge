@@ -416,6 +416,8 @@ window.abi = [
 ]
 
 window.ChainList = [
-    {}
+    {
+        
+    }
 
 ]
