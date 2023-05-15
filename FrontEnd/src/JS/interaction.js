@@ -31,7 +31,7 @@ async function getID(){
     return(netID);
 }
 
-async function SwitchChain(){
+async function SwitchChainHeader(ChainID){
     
 }
 
