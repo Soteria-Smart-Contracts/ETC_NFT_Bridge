@@ -34,7 +34,7 @@ async function getID(){
 }
 
 async function SwitchChainHeader(ChainID){
-    ChainText = 
+    ChainText = Chainlist.find()
 }
 
 async function Compare(ChainID){
