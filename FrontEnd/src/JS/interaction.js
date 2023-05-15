@@ -37,11 +37,6 @@ async function SwitchChainHeader(ChainID){
     ChainText.innerText = Chainlist.find(ChainID).Name + toString(ChainID);
 }
 
-async function Compare(ChainID){
-    Name = Chainlist.ChainID === ChainID;
-    
-}
-
 // async function CreateETCProp(){
 //     let Amount = BigInt(web3.utils.toWei(document.getElementById('ETCAMM').value));
 //     let Receiver = document.getElementById('ETCrec').value;
