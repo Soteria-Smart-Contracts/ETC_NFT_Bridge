@@ -31,7 +31,7 @@ async function getID(){
     return(netID);
 }
 
-async SwitchChainHeader
+async SwitchChainHeader(ChainID)
 
 async function Compare(ChainID){
     Name = Chainlist.ChainID === ChainID;
