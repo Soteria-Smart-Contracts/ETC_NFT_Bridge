@@ -6,6 +6,8 @@ let account;
 let netID;
 let LoggedIn = false;
 
+
+
 loginWithEth();
 
 async function loginWithEth(){
