@@ -41,6 +41,9 @@ async function SwitchChainHeader(){
     if(netID === 61){
         ChainText.innerText = " Ethereum Classic - ID 61"
     }
+    else{
+        
+    }
     
 }
 
