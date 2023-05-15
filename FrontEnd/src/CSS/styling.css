@@ -7,13 +7,11 @@ body{
 .DappBox{
     padding: 2.5vh;
     margin-top: 4vh;
-
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10vw;
+    margin-right: 10vw;
     margin-bottom: 3.5vh;
     background-color: white;
     text-align: center;
-    max-width: 43vw;
     min-height: 66vh;
     border-radius: 20px;
 }
