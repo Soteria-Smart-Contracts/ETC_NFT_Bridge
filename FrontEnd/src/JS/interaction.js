@@ -6,7 +6,7 @@ let account;
 let netID;
 let LoggedIn = false;
 
-let ChainText = document.
+let ChainText = document.getElementById()
 
 loginWithEth();
 
