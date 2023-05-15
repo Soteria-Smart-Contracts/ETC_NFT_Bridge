@@ -39,10 +39,10 @@ async function SwitchChainHeader(){
         ChainText.innerText = " Goerli - 5"
     }
     if(netID == 61){
-        ChainText.innerText = " Ethereum Classic - 61"
+        ChainText.innerText = " Ethereum Classic - ID 61"
     }
     else{
-        ChainText.innerText = " Unkown - " + netID;
+        ChainText.innerText = " Unkown - ID " + netID;
     }
 }
 
