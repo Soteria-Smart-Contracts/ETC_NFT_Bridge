@@ -41,7 +41,7 @@ async function SwitchChainHeader(ChainID){
         ChainText.innerText = "Goerli - 5"
     }
     else{
-        
+        ChainText.innerText = "Unkown - 5"
     }
 }
 
