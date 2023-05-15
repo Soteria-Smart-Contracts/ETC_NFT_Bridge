@@ -37,8 +37,11 @@ async function SwitchChainHeader(ChainID){
     if(netID == 5){
         ChainText.innerText = "Goerli - 5"
     }
-    if(netID == 5){
+    if(netID == 61){
         ChainText.innerText = "Goerli - 5"
+    }
+    else{
+        
     }
 }
 
