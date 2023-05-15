@@ -5,6 +5,7 @@ body{
 
 .DappBox{
     padding: 5vh;
+    background-color: white;
     text-align: center;
     min-width: 35vw;
     min-height: 66vh;
