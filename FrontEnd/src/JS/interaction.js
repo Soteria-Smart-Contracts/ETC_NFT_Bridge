@@ -34,7 +34,7 @@ async function getID(){
 }
 
 async function SwitchChainHeader(ChainID){
-    Chai
+    ChainText = 
 }
 
 async function Compare(ChainID){
