@@ -34,8 +34,9 @@ async function getID(){
 }
 
 async function SwitchChainHeader(ChainID){
-    if(netID == 5)
-    ChainText.innerText = 
+    if(netID == 5){
+        ChainText.innerText = 
+    }
 }
 
 // async function CreateETCProp(){
