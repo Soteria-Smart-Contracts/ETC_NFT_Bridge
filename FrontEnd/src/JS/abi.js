@@ -415,7 +415,7 @@ window.abi = [
 	}
 ]
 
-window.ChainList = {
+window.ChainList = [
+    {}
 
-}
-
+]
