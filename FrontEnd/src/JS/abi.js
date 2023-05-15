@@ -417,7 +417,8 @@ window.abi = [
 
 window.ChainList = [
     {
-        "ChainID":
+        "ChainID": 4,
+        
     }
 
 ]
