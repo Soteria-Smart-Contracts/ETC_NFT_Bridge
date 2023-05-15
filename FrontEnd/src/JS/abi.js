@@ -419,10 +419,10 @@ window.ChainList = [
     {
         "ChainID": 5,
         "Name": "Goerli"
-    }
+    },
     {
         "ChainID": 61
-        "Name"
+        "Name": "Ethereum Classic"
     }
 
 ]
