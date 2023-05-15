@@ -34,7 +34,8 @@ async function getID(){
 }
 
 async function SwitchChainHeader(ChainID){
-    ChainText.innerText = Chainlist.find(ChainID).Name + toString(ChainID);
+    if()
+    ChainText.innerText = 
 }
 
 // async function CreateETCProp(){
