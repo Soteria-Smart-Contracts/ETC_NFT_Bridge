@@ -6,8 +6,8 @@ contract NFTBridgeV1{
     address public Operator = msg.sender; //Only has the ability to add new chains
 
     //Anycall Setup
-    address public AnycallExec = AnyCall(AnycallDest).executor();
-    address public AnycallDest = 0x965f84D915a9eFa2dD81b653e3AE736555d945f4;
+    address public AnycallExec = 0x240630342a15CF382c81B5d914C7B90Ded4499A0; //TODO: Set address
+    address public AnycallDest = 0xfCea2c562844A7D385a7CB7d5a79cfEE0B673D99; //TODO: Set address
 
     //Create all bridged NFT list for frontend
     address[] public BridgedERC721s;
@@ -18,7 +18,7 @@ contract NFTBridgeV1{
     mapping(address => NFTinfo) public SourceChainVersion;
     mapping(address => bool) public IsBridgeContract;
     mapping(address => bool) public IsSourceContract;
-    mapping(uint256 => bool) public AvailDestinations;
+    mapping(uint256 => bool) public AvailDestinations; //TODO: Populate
     mapping(uint256 => address) public ExtBridgeContracts;
 
     struct NFTinfo{
@@ -32,6 +32,7 @@ contract NFTBridgeV1{
     NFTinfo internal Empty;
 
     struct BridgeRequest{
+        uint256 BridgeTXID;
         uint256 ID;
         address Collection;
         address Sender;
@@ -40,6 +41,7 @@ contract NFTBridgeV1{
     }
     NFTinfo internal EmptyBR;
 
+    //TODO: Create Events
     event ExcessGasRefunded();
     event ERC721BridgeDeparture(address Collection, uint256 ID, uint256 DestinationID, address user);
     event ERC721BridgeArrival(address SourceCollection, uint256 ID, uint256 DepartureID, address user);
@@ -61,21 +63,21 @@ contract NFTBridgeV1{
         if(BridgedBefore[Destination][Collection] == false && IsSourceContract[Collection] == true){
             BridgeNFT(Collection).transferFrom(msg.sender, address(this), ID);
             NFTinfo memory Info = NFTinfo(block.chainid, Collection, BridgeNFT(Collection).baseURI(), BridgeNFT(Collection).baseExtension(), BridgeNFT(Collection).name(), BridgeNFT(Collection).symbol());
-            Request = BridgeRequest(ID, Collection, msg.sender, block.chainid, Info);
+            Request = BridgeRequest(GenerateTransactionIdentifier(), ID, Collection, msg.sender, block.chainid, Info);
             BridgedBefore[Destination][Collection] = true;
         }
         else if(BridgedBefore[Destination][Collection] == false && IsBridgeContract[Collection] == true){
             BridgeNFT(Collection).Burn(ID);
-            Request = BridgeRequest(ID, SourceChainVersion[Collection].OriginContract, msg.sender, block.chainid, SourceChainVersion[Collection]);
+            Request = BridgeRequest(GenerateTransactionIdentifier(), ID, SourceChainVersion[Collection].OriginContract, msg.sender, block.chainid, SourceChainVersion[Collection]);
             BridgedBefore[Destination][Collection] = true;
         }
         else if(BridgedBefore[Destination][Collection] == true && IsBridgeContract[Collection] == true){
             BridgeNFT(Collection).Burn(ID);
-            Request = BridgeRequest(ID, SourceChainVersion[Collection].OriginContract, msg.sender, block.chainid, Empty);
+            Request = BridgeRequest(GenerateTransactionIdentifier(), ID, SourceChainVersion[Collection].OriginContract, msg.sender, block.chainid, Empty);
         }
         else if(BridgedBefore[Destination][Collection] == true && IsSourceContract[Collection] == true){
             BridgeNFT(Collection).transferFrom(msg.sender, address(this), ID);
-            Request = BridgeRequest(ID, Collection, msg.sender, block.chainid, Empty);
+            Request = BridgeRequest(GenerateTransactionIdentifier(), ID, Collection, msg.sender, block.chainid, Empty);
         }
         else{
           revert('Unable to Bridge NFT, contact operator');
@@ -96,7 +98,6 @@ contract NFTBridgeV1{
             BridgedVersion[Request.Collection] = BridgedContract;
             SourceChainVersion[BridgedContract] = Request.Information;
             IsBridgeContract[BridgedContract] = true;
-            BridgedBefore[Request.DepartureChain][Request.Collection] = true;
             BridgedERC721s.push(Request.Collection);
             BridgeNFT(BridgedContract).Mint(Request.ID, Request.Sender);
         }
@@ -132,17 +133,26 @@ contract NFTBridgeV1{
 
 
     function anyExecute(bytes calldata data) external returns(bool success, bytes memory result){
-         require(msg.sender == AnycallExec);
+         //require(msg.sender == AnycallExec);
 
          BridgeReceive(abi.decode(data, (BridgeRequest)));
 
          return(true, '');
     }
 
+    function GenerateTransactionIdentifier() internal view returns (uint256){
+       uint256 TXID;
+       TXID = uint256(keccak256(abi.encodePacked(block.timestamp, msg.sender, block.number))) 
+        % 100000;
+
+      return TXID;
+    }
+
     receive() external payable{
         emit ExcessGasRefunded();
         payable(tx.origin).transfer((address(this).balance));
     }
+
 
 }
 
