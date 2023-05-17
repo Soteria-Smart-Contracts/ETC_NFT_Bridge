@@ -8,7 +8,7 @@ let LoggedIn = false;
 
 let ChainText = document.getElementById('Ticker');
 
-loginWithEth(); 
+loginWithEth();  //MAKE RE-OCCURING
 
 //DONT FORGOT TRY MULTICHAIN API???
 
