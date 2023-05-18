@@ -35,7 +35,8 @@ async function searchObjectByName(name, object){
          if (object[i].Name.toLowerCase().includes(name.toLowerCase())){
              return object[i]; } 
     
-    } return null; } 
+    } return null; 
+} 
 
 async function getID(){
     let idhex = web3.eth._provider.chainId;
