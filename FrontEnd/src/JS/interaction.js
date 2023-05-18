@@ -30,6 +30,8 @@ async function loginWithEth(){
     }
 }
 
+function searchObjectByName(name, object) { for (let i = 0; i < object.length; i++) { if (object[i].Name.toLowerCase().includes(name.toLowerCase())) { return object[i]; } } return null; } 
+
 async function getID(){
     let idhex = web3.eth._provider.chainId;
     netID = parseInt(idhex, 16);
