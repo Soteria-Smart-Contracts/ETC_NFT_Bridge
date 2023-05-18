@@ -38,7 +38,7 @@ async function searchObjectByName(name, object){
             } 
     
     } 
-    return null; 
+    return Results; 
 } 
 
 async function getID(){
