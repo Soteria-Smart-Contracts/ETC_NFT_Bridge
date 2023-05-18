@@ -31,7 +31,7 @@ async function loginWithEth(){
 }
 
 async function searchObjectByName(name, object){
-    Results  
+    let Results = []; 
     for (let i = 0; i < object.length; i++) {
          if (object[i].Name.toLowerCase().includes(name.toLowerCase())){
              return object[i]; } 
