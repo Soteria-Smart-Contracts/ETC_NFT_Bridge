@@ -34,7 +34,7 @@ async function searchObjectByName(name, object){
     let Results = []; 
     for (let i = 0; i < object.length; i++) {
          if (object[i].Name.toLowerCase().includes(name.toLowerCase())){
-             return object[i]; } 
+             Results.push(); } 
     
     } return null; 
 } 
