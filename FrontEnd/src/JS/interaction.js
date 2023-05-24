@@ -71,7 +71,9 @@ async function SwitchChainHeader(){
     
 }
 
-async function SiteUpdate()
+async function SiteUpdate(){
+    console.log('Isworking?')
+}
 
 async function DisplayBoxes(){
     if(CollectionInput.value != ""){
