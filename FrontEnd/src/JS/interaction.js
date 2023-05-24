@@ -7,6 +7,7 @@ let netID;
 let LoggedIn = false;
 
 let ChainText = document.getElementById('Ticker');
+let Boxes = document.get
 
 loginWithEth();  //MAKE RE-OCCURING
 
