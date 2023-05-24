@@ -12,7 +12,6 @@ body{
     margin-bottom: 3.5vh;
     background-color: white;
     text-align: center;
-    align-items: center;
     min-height: 66vh;
     border-radius: 20px;
 }
@@ -29,7 +28,6 @@ body{
 }
 
 .SearchContent {
-    position: absolute;
     margin: auto;
     min-width: 60px;
     overflow: auto;
