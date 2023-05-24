@@ -38,6 +38,7 @@ body{
 
 .DropdownBox {
     position: relative;
+    float: left;
     display: inline-block;
 }
 
