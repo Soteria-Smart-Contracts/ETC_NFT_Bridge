@@ -5,6 +5,7 @@ const Chainlist = window.Chainlist;
 let account;
 let netID;
 let LoggedIn = false;
+let Collection
 
 let ChainText = document.getElementById('Ticker');
 let Boxes = document.getElementById('Boxes');
