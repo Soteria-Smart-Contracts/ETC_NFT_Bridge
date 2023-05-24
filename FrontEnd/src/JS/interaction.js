@@ -63,7 +63,7 @@ async function SwitchChainHeader(){
 
 async function DisplayBoxes(){
     Boxes.style.display = "";
-    console.log("I am here")
+    console.log("I am here");
 }
 
 // async function CreateETCProp(){
