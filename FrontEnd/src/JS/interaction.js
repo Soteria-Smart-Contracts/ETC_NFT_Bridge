@@ -11,6 +11,13 @@ let ChainText = document.getElementById('Ticker');
 let Boxes = document.getElementById('Boxes');
 let CollectionInput = document.getElementById('CollectionInput');
 
+
+let accountInterval = setInterval(function() {
+    if (web3.eth.accounts[0] !== account) {
+      loginWithEth();
+    
+  }, 300);
+
 loginWithEth();  //MAKE RE-OCCURING
 
 //DONT FORGOT TRY MULTICHAIN API???
