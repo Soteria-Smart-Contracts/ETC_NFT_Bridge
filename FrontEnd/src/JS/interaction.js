@@ -63,8 +63,8 @@ async function SwitchChainHeader(){
 
 async function DisplayBoxes(){
     if(CollectionInput.innerText != ""){
-    Boxes.style.display = "";
-    console.log("I am here");
+        Boxes.style.display = "";
+    }
 }
 
 // async function CreateETCProp(){
