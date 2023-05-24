@@ -23,6 +23,10 @@ loginWithEth();  //MAKE RE-OCCURING
 
 //DONT FORGOT TRY MULTICHAIN API???
 
+async function SiteUpdate(){
+    console.log('Isworking?')
+}
+
 async function loginWithEth(){
     if(LoggedIn == false){
     if(window.ethereum){
@@ -69,10 +73,6 @@ async function SwitchChainHeader(){
         ChainText.innerText = " Unknown - ID " + netID;
     }
     
-}
-
-async function SiteUpdate(){
-    console.log('Isworking?')
 }
 
 async function DisplayBoxes(){
