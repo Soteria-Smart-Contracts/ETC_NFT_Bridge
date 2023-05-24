@@ -28,7 +28,6 @@ body{
 }
 
 .SearchContent {
-    display: none;
     position: absolute;
     background-color: #f6f6f6;
     min-width: 230px;
