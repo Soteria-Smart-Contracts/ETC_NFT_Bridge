@@ -29,6 +29,7 @@ body{
 
 .SearchContent {
     position: absolute;
+    margin: auto;
     min-width: 60px;
     overflow: auto;
     border: 1px solid #ddd;
