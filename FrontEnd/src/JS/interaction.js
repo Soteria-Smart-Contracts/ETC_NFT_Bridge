@@ -16,7 +16,7 @@ let accountInterval = setInterval(function() {
     if (web3.eth.accounts[0] !== account) {
       loginWithEth();
     }
-
+    SiteUpdate();
   }, 300);
 
 loginWithEth();  //MAKE RE-OCCURING
