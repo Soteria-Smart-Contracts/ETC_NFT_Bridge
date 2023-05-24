@@ -62,7 +62,7 @@ async function SwitchChainHeader(){
 }
 
 async function DisplayBoxes(){
-    Boxes.style.display = origi
+    Boxes.style.display = orignal
 }
 
 // async function CreateETCProp(){
