@@ -8,7 +8,7 @@ let LoggedIn = false;
 
 let ChainText = document.getElementById('Ticker');
 let Boxes = document.getElementById('Boxes');
-let CollectionInput = document.getElementById('')
+let CollectionInput = document.getElementById('CollectionInput');
 
 loginWithEth();  //MAKE RE-OCCURING
 
