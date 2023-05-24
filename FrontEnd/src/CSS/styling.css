@@ -17,5 +17,5 @@ body{
 }
 
 .CollectionInput{
-    width: 25vw;
+    min-width: 25vw;
 }
