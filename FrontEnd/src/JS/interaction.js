@@ -15,6 +15,7 @@ let CollectionInput = document.getElementById('CollectionInput');
 let accountInterval = setInterval(function() {
     if (web3.eth.accounts[0] !== account) {
       loginWithEth();
+    }
     
   }, 300);
 
