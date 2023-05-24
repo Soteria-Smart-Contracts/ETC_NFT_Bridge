@@ -63,7 +63,7 @@ async function SwitchChainHeader(){
 }
 
 async function DisplayBoxes(){
-    if(CollectionInput.innerText != ""){
+    if(CollectionInput.value != ""){
         Boxes.style.display = "";
     }
     else{
