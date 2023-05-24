@@ -61,6 +61,8 @@ async function SwitchChainHeader(){
     
 }
 
+async function DisplayBoxes()
+
 // async function CreateETCProp(){
 //     let Amount = BigInt(web3.utils.toWei(document.getElementById('ETCAMM').value));
 //     let Receiver = document.getElementById('ETCrec').value;
