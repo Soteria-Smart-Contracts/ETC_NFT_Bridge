@@ -39,6 +39,7 @@ body{
 .DropdownBox {
     position: relative;
     display: inline-block;
+    background-color: white;
 }
 
 .DropdownBox a {
