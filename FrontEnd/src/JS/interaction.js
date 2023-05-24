@@ -62,7 +62,7 @@ async function SwitchChainHeader(){
 }
 
 async function DisplayBoxes(){
-    Boxes.style.display = 
+    Boxes.style.display = "";
 }
 
 // async function CreateETCProp(){
