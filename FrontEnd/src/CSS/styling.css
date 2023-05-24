@@ -39,7 +39,8 @@ body{
 .DropdownBox {
     position: relative;
     display: inline-block;
-    background-color: white;
+    border-radius: ;
+    background-color: rgb(190, 190, 190);
 }
 
 .DropdownBox a {
