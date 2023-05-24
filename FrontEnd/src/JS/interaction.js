@@ -24,7 +24,7 @@ loginWithEth();  //MAKE RE-OCCURING
 //DONT FORGOT TRY MULTICHAIN API???
 
 async function SiteUpdate(){
-    
+    if()
     console.log('Isworking?')
 }
 
