@@ -71,7 +71,7 @@ async function SwitchChainHeader(){
     
 }
 
-async functio
+async function SiteUpdate()
 
 async function DisplayBoxes(){
     if(CollectionInput.value != ""){
