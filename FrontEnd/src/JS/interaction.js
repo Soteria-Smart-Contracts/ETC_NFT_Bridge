@@ -62,7 +62,7 @@ async function SwitchChainHeader(){
 }
 
 async function DisplayBoxes(){
-    if(CollectionInput.innerText !=)
+    if(CollectionInput.innerText != ""){
     Boxes.style.display = "";
     console.log("I am here");
 }
