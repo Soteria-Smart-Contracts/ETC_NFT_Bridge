@@ -16,7 +16,7 @@ let accountInterval = setInterval(function() {
     if (web3.eth.accounts[0] !== account) {
       loginWithEth();
     }
-    
+
   }, 300);
 
 loginWithEth();  //MAKE RE-OCCURING
@@ -70,6 +70,8 @@ async function SwitchChainHeader(){
     }
     
 }
+
+async functio
 
 async function DisplayBoxes(){
     if(CollectionInput.value != ""){
