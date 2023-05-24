@@ -65,6 +65,9 @@ async function DisplayBoxes(){
     if(CollectionInput.innerText != ""){
         Boxes.style.display = "";
     }
+    else{
+        Boxes.style.display = "none";
+    }
 }
 
 // async function CreateETCProp(){
