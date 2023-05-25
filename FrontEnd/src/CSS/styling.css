@@ -37,7 +37,7 @@ body{
 }
 
 .ContinueBTN{
-    po
+    position: fixed;
 }
 
 .DropdownBox {
