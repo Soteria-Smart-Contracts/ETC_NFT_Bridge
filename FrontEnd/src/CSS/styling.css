@@ -42,7 +42,7 @@ body{
     border-radius: 20px;
     padding: 15px;
     background-color: rgb(190, 190, 190);
-    max-height: 45vh;
+    height: fit-content;
 }
 
 .DropdownBox a {
