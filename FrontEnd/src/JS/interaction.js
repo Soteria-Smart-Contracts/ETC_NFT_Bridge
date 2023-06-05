@@ -11,7 +11,8 @@ let Listings = [
         "Address": "0x44b6ad1DcceC2A512088997766cC39D0cf3f5D12"
     }
     {
-        
+        "Name": "ETCzuki",
+        "Address": "0x44b6ad1DcceC2A512088997766cC39D0cf3f5D12"
     }
 ];
 let CollectionSelected = false;
