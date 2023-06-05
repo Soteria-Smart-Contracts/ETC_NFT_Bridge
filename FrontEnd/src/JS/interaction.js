@@ -98,10 +98,10 @@ async function Searching(){
         if(Results.length > 0){
             let index;
             while(index < Results.length){
-                Boxes.appendChild()
+                
                 index++;
             }
-            Boxes.innerHTML = 
+            Boxes.innerHTML = Output;
         }
     }
     else{
