@@ -95,7 +95,7 @@ async function SwitchChainHeader(){
 
 async function Selected(Collection){
     CollectionSelected = true;
-    DappHeader.innerText = 
+    DappHeader.innerText = "";
 }
 
 async function Search(){
