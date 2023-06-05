@@ -94,6 +94,7 @@ async function SwitchChainHeader(){
 async function Searching(){
     if(CollectionInput.value != ""){
         Boxes.style.display = "";
+        SearchListings()
     }
     else{
         Boxes.style.display = "none";
