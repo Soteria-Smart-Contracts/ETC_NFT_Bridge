@@ -98,7 +98,7 @@ async function Searching(){
         if(Results.length > 0){
             let index;
             while(index < Results.length){
-                Output += 
+                Output += "hello";
                 index++;
             }
             Boxes.innerHTML = Output;
