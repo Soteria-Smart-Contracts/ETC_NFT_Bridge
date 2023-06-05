@@ -100,7 +100,7 @@ async function Searching(){
             let index = 0;
             let Output = "";
             while(index < Results.length){
-                Output += ("<a>"+"");
+                Output += ("<a>"+"</a>");
                 console.log(Output);
                 index++;
             }
