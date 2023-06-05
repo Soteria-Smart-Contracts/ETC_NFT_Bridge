@@ -109,7 +109,6 @@ async function Search(){
                 let Output = "";
                 while(index < Results.length){
                     Output += ("<a onclick='Selected(" + Results[index] + ")'>" + Results[index].Name + " - " + Results[index].Address + "</a>");
-                    console.log(Output);
                     index++;
                 }
                 Boxes.innerHTML = Output;
