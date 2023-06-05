@@ -69,7 +69,7 @@ async function SearchListings(input){
             } 
     
     } 
-    conso
+    console.log(Results);
     return Results;  
 } 
 
