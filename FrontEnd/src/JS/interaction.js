@@ -77,7 +77,7 @@ async function SwitchChainHeader(){
     
 }
 
-async function DisplayBoxes(){
+async function Searching(){
     if(CollectionInput.value != ""){
         Boxes.style.display = "";
     }
