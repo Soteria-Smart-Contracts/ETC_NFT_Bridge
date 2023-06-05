@@ -93,7 +93,7 @@ async function SwitchChainHeader(){
 }
 
 async function Selected(Input){
-    Collection = Inp
+    Collection = JSON.parse(Input);
     console.log("Name:", Collection.Name, "Address:", Collection.Address)
 }
 
