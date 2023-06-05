@@ -8,6 +8,7 @@ let LoggedIn = false;
 let Listings = [
     {
         "Name": "ETCzuki"
+        "Address": ""
     }
 ];
 let CollectionSelected = false;
