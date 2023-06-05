@@ -25,6 +25,7 @@ let CollectionSelected = false;
 let ChainText = document.getElementById('Ticker');
 let Boxes = document.getElementById('Boxes');
 let CollectionInput = document.getElementById('CollectionInput');
+let DappHeader = document.getElementById('CollectionInput');
 
 
 let accountInterval = setInterval(function() {
@@ -94,7 +95,7 @@ async function SwitchChainHeader(){
 
 async function Selected(Collection){
     CollectionSelected = true;
-    
+
 }
 
 async function Search(){
