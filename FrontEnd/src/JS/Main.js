@@ -95,7 +95,7 @@ async function SwitchChainHeader(){
 
 async function Selected(Collection){
     CollectionSelected = true;
-    DappHeader.innerText = "Which ";
+    DappHeader.innerText = "Which token would you like to ";
 }
 
 async function Search(){
