@@ -96,7 +96,7 @@ async function Searching(){
         Boxes.style.display = "";
         Results = await SearchListings(CollectionInput.value);
         if(Results.length > 0){
-            
+            index = 0
         }
     }
     else{
