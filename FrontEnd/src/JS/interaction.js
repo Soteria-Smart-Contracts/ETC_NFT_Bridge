@@ -7,7 +7,7 @@ let netID;
 let LoggedIn = false;
 let Listings = [
     {
-        "Name"
+        "Name": "ETCzuki"
     }
 ];
 let CollectionSelected = false;
