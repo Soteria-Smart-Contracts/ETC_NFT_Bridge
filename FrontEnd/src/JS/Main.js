@@ -112,7 +112,7 @@ async function Searching(){
             else{
                 Boxes.innerHTML = ("<a>No Results Found, Try pasting the contract address for the ERC721</a>");
             }
-            
+        }
     }
     else{
         Boxes.style.display = "none";
