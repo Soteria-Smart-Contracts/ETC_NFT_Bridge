@@ -92,7 +92,9 @@ async function SwitchChainHeader(){
     
 }
 
-async function Selected()
+async function Selected(Collection){
+    console.log()
+}
 
 async function Search(){
     if(CollectionInput.value != ""){
