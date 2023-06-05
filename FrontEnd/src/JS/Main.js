@@ -95,7 +95,9 @@ async function SwitchChainHeader(){
 async function Searching(){
     if(CollectionInput.value != ""){
         Boxes.style.display = "";
-        if(CollectionInput.value.includes("0x") && CollectionInput.value.length == 42){}
+        if(CollectionInput.value.includes("0x") && CollectionInput.value.length == 42){
+        }
+        else{}
             Results = await SearchListings(CollectionInput.value);
             if(Results.length > 0){
                 let index = 0;
