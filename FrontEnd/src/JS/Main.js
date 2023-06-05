@@ -92,7 +92,8 @@ async function SwitchChainHeader(){
     
 }
 
-async function Selected(Collection){
+async function Selected(Input){
+    Colle
     console.log("Name:", Collection.Name, "Address:", Collection.Address)
 }
 
