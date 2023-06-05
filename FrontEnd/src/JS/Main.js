@@ -92,6 +92,8 @@ async function SwitchChainHeader(){
     
 }
 
+async function Selected()
+
 async function Search(){
     if(CollectionInput.value != ""){
         Boxes.style.display = "";
