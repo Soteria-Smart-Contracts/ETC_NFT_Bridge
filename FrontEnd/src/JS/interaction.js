@@ -101,7 +101,7 @@ async function Searching(){
                 Boxes.appendChild()
                 index++;
             }
-            
+            Boxes.innerHTML = 
         }
     }
     else{
