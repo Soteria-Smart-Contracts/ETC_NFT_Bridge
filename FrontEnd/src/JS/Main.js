@@ -92,7 +92,7 @@ async function SwitchChainHeader(){
     
 }
 
-async function Searching(){
+async function Search(){
     if(CollectionInput.value != ""){
         Boxes.style.display = "";
         if(CollectionInput.value.includes("0x") && CollectionInput.value.length == 42){
