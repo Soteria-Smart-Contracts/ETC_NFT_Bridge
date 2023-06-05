@@ -95,7 +95,9 @@ async function Searching(){
     if(CollectionInput.value != ""){
         Boxes.style.display = "";
         Results = await SearchListings(CollectionInput.value);
-        if()
+        if(Results.length > 0){
+            
+        }
     }
     else{
         Boxes.style.display = "none";
