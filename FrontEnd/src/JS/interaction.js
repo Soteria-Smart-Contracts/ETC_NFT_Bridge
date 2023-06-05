@@ -101,6 +101,7 @@ async function Searching(){
                 Boxes.appendChild()
                 index++;
             }
+            
         }
     }
     else{
