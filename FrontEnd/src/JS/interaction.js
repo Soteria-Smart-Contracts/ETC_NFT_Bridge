@@ -98,7 +98,7 @@ async function Searching(){
         if(Results.length > 0){
             let index;
             while(index < Results.length){
-                Boxes
+                Boxes.appendChild
                 index++;
             }
         }
