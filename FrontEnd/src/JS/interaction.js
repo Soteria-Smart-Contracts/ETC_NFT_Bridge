@@ -61,7 +61,7 @@ async function loginWithEth(){
     }
 }
 
-async function searchObjectByName(input){
+async function SearchListings(input){
     let Results = []; 
     for (let i = 0; i < Listings.length; i++) {
          if (Listings[i].Name.toLowerCase().includes(input.toLowerCase())){
