@@ -102,6 +102,7 @@ async function Searching(){
                 Output += "hello";
                 index++;
             }
+            console.log(Output);
             Boxes.innerHTML = Output;
         }
     }
