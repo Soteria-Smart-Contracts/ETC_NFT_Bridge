@@ -97,7 +97,7 @@ async function Searching(){
         Boxes.style.display = "";
         if(CollectionInput.value.includes("0x") && CollectionInput.value.length == 42){
         }
-        else{}
+        else{
             Results = await SearchListings(CollectionInput.value);
             if(Results.length > 0){
                 let index = 0;
@@ -112,6 +112,7 @@ async function Searching(){
             else{
                 Boxes.innerHTML = ("<a>No Results Found, Try pasting the contract address for the ERC721</a>");
             }
+            
     }
     else{
         Boxes.style.display = "none";
