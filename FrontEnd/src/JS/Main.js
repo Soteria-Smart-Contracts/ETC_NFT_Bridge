@@ -93,7 +93,8 @@ async function SwitchChainHeader(){
 }
 
 async function Selected(Collection){
-    CollectionSelected = 
+    CollectionSelected = true;
+    
 }
 
 async function Search(){
