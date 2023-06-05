@@ -93,7 +93,7 @@ async function SwitchChainHeader(){
 }
 
 async function Selected(Collection){
-    console.log(Collection.Name, Collection.)
+    console.log("Name:" Collection.Name, Collection.Address)
 }
 
 async function Search(){
