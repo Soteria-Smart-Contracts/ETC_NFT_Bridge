@@ -13,10 +13,10 @@ let Listings = [
     {
         "Name": "ETCfrogB",
         "Address": "0x5925630e4D0AB569A40E600064Da2930b4838Da3"
-    }
+    },
     {
-        "Name": "ETCfrogB",
-        "Address": "0x5925630e4D0AB569A40E600064Da2930b4838Da3"
+        "Name": "Dreamgirls",
+        "Address": "0x36935F7D0Ee6cCb7f54f77517704A612067B3647"
     }
 ];
 let CollectionSelected = false;
