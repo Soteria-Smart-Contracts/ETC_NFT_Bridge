@@ -101,9 +101,9 @@ async function Searching(){
             let Output;
             while(index < Results.length){
                 Output = Output + "hello";
+                console.log(Output);
                 index++;
             }
-            console.log(Output);
             Boxes.innerHTML = Output;
         }
     }
