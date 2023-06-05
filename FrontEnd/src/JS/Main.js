@@ -96,7 +96,7 @@ async function Searching(){
     if(CollectionInput.value != ""){
         Boxes.style.display = "";
         if(CollectionInput.value.includes("0x") && CollectionInput.value.length == 42){
-            Boxes.innerHTML = ("<a>ERC721 at address " + + "</a>");
+            Boxes.innerHTML = ("<a>ERC721 at address " + CollectionInput.value + "</a>");
         }
         else{
             Results = await SearchListings(CollectionInput.value);
