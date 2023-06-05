@@ -100,7 +100,7 @@ async function Searching(){
             let index = 0;
             let Output = "";
             while(index < Results.length){
-                Output += ("<a>" + Results[index].Name + " - " + '<a target="_blank' href" + ">" "</a>");
+                Output += ("<a>" + Results[index].Name + " - " + '<a target="_blank" href' + ">" + "</a>");
                 console.log(Output);
                 index++;
             }
