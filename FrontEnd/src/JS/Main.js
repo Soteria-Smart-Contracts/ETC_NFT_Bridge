@@ -95,20 +95,20 @@ async function SwitchChainHeader(){
 async function Searching(){
     if(CollectionInput.value != ""){
         Boxes.style.display = "";
-        Results = await SearchListings(CollectionInput.value);
-        if(Results.length > 0){
-            let index = 0;
-            let Output = "";
-            while(index < Results.length){
-                Output += ("<a>" + Results[index].Name + " - " + Results[index].Address + "</a>");
-                console.log(Output);
-                index++;
+            Results = await SearchListings(CollectionInput.value);
+            if(Results.length > 0){
+                let index = 0;
+                let Output = "";
+                while(index < Results.length){
+                    Output += ("<a>" + Results[index].Name + " - " + Results[index].Address + "</a>");
+                    console.log(Output);
+                    index++;
+                }
+                Boxes.innerHTML = Output;
             }
-            Boxes.innerHTML = Output;
-        }
-        else{
-            Boxes.innerHTML = ("<a>No Results Found, Try pasting the contract address for the ERC721</a>");
-        }
+            else{
+                Boxes.innerHTML = ("<a>No Results Found, Try pasting the contract address for the ERC721</a>");
+            }
     }
     else{
         Boxes.style.display = "none";
