@@ -93,7 +93,7 @@ async function SwitchChainHeader(){
 }
 
 async function Selected(Input){
-    Colle
+    Collection = Inp
     console.log("Name:", Collection.Name, "Address:", Collection.Address)
 }
 
