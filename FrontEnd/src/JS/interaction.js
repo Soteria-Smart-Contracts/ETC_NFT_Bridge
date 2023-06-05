@@ -6,7 +6,9 @@ let account;
 let netID;
 let LoggedIn = false;
 let Listings = [
-    
+    {
+        
+    }
 ];
 let CollectionSelected = false;
 
