@@ -7,8 +7,11 @@ let netID;
 let LoggedIn = false;
 let Listings = [
     {
-        "Name": "ETCzuki"
-        "Address": ""
+        "Name": "ETCzuki",
+        "Address": "0x44b6ad1DcceC2A512088997766cC39D0cf3f5D12"
+    }
+    {
+        
     }
 ];
 let CollectionSelected = false;
