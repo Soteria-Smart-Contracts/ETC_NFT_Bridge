@@ -107,7 +107,7 @@ async function Searching(){
             Boxes.innerHTML = Output;
         }
         else{
-            Boxes.innerHTML = ("<a>"  "</a>");
+            Boxes.innerHTML = ("<a></a>");
         }
     }
     else{
