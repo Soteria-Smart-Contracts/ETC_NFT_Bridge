@@ -95,7 +95,7 @@ async function Searching(){
     if(CollectionInput.value != ""){
         Boxes.style.display = "";
         Results = SearchListings(CollectionInput.value);
-        
+        console.log(Results);
     }
     else{
         Boxes.style.display = "none";
