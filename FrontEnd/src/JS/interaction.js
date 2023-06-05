@@ -69,6 +69,7 @@ async function SearchListings(input){
             } 
     
     } 
+    conso
     return Results;  
 } 
 
