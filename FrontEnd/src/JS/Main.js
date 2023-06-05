@@ -41,7 +41,7 @@ loginWithEth();  //MAKE RE-OCCURING
 
 async function SiteUpdate(){
     if(CollectionSelected){
-        console.log('Isworking?')
+        //do we need this
     }
 }
 
