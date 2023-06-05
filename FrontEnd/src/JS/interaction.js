@@ -97,7 +97,10 @@ async function Searching(){
         Results = await SearchListings(CollectionInput.value);
         if(Results.length > 0){
             let index;
-            while(index < Results.length)
+            while(index < Results.length){
+                
+                index++;
+            }
         }
     }
     else{
