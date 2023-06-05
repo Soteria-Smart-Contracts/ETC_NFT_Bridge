@@ -69,7 +69,6 @@ async function SearchListings(input){
             } 
     
     } 
-    console.log(Results);
     return Results;  
 } 
 
