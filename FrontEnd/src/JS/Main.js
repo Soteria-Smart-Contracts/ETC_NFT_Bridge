@@ -106,6 +106,9 @@ async function Searching(){
             }
             Boxes.innerHTML = Output;
         }
+        else{
+            Boxes.innerHTML = ;
+        }
     }
     else{
         Boxes.style.display = "none";
