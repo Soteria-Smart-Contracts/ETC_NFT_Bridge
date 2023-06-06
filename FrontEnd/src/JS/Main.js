@@ -15,6 +15,7 @@ let CollectionInput = document.getElementById('CollectionInput');
 let DappHeader = document.getElementById('Header');
 let SelectedHeader = document.getElementById('Selected');
 let Searchbar = document.getElementById('SearchBar');
+let IDinput = document.getElementById('IDinput');
 ReturnBTN.style.display = "none";
 
 let Listings = [
