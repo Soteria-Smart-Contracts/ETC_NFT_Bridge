@@ -44,7 +44,7 @@ async function SiteUpdate(){
         //do we need this
     }
     if(netID != await getID()){
-        
+        loginWithEth();
     }
 }
 
