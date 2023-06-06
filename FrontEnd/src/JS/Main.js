@@ -102,7 +102,7 @@ async function SwitchChainHeader(){
 async function Selected(Collection){
     CollectionSelected = true;
     Searchbar.style.display = "none";
-    Selected.innerHTML = ("Selected collection: " + "<a target='_blank' href" + ">");
+    Selected.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + ">");
     DappHeader.innerText = "Which token would you like to bridge?";
 }
 
