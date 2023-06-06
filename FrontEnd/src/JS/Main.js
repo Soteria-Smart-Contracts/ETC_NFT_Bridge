@@ -115,7 +115,7 @@ async function Unselect(){
     CollectionSelected = false;
     Searchbar.style.display = "";
     ReturnBTN.style.display = "none";
-    SelectedHeader.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + CollectionLink + "'>" + Collection.Name + "</a>");
+    SelectedHeader.innerHTML = '';
     DappHeader.innerText = "Which token would you like to bridge?";
 }
 
