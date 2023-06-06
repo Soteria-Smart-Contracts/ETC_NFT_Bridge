@@ -43,7 +43,9 @@ async function SiteUpdate(){
     if(CollectionSelected){
         //do we need this
     }
-    if(netID)
+    if(netID != await getID();){
+        
+    }
 }
 
 async function loginWithEth(){
