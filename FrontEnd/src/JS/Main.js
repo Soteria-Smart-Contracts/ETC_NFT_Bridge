@@ -29,7 +29,7 @@ let Listings = [
     {
         "Name": "Dreamgirls",
         "Address": "0x36935F7D0Ee6cCb7f54f77517704A612067B3647"
-        ""
+        "HasOwnerIndex" : "true"
     }
 ];
 
