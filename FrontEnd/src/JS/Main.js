@@ -49,8 +49,8 @@ async function SiteUpdate(){
     }
 }
 
-async function loginWithEth(){
-    if(LoggedIn == false){
+async function loginWithEth(bypass){
+    if(LoggedIn == false || bypass == ){
         if(window.ethereum){
             await ethereum.request({ method: 'eth_requestAccounts' });
             window.web3 = await new Web3(ethereum);
