@@ -21,10 +21,12 @@ let Listings = [
     {
         "Name": "ETCzuki",
         "Address": "0x44b6ad1DcceC2A512088997766cC39D0cf3f5D12",
+        "HasOwnerIndex": "true"
     },
     {
         "Name": "ETCfrogB",
         "Address": "0x5925630e4D0AB569A40E600064Da2930b4838Da3",
+        "HasOwnerIndex": "true"
     },
     {
         "Name": "Dreamgirls",
