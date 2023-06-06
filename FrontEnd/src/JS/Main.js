@@ -102,7 +102,7 @@ async function SwitchChainHeader(){
 async function Selected(Collection){
     CollectionSelected = true;
     Searchbar.style.display = "none";
-    let CollectionLink =
+    let CollectionLink = ()
     Selected.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + "" + ">");
     DappHeader.innerText = "Which token would you like to bridge?";
 }
