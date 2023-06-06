@@ -6,6 +6,17 @@ let account;
 let Results;
 let netID;
 let LoggedIn = false;
+let CollectionSelected = false;
+
+let ReturnBTN = document.getElementById('ReturnBTN');
+let ChainText = document.getElementById('Ticker');
+let Boxes = document.getElementById('Boxes');
+let CollectionInput = document.getElementById('CollectionInput');
+let DappHeader = document.getElementById('Header');
+let SelectedHeader = document.getElementById('Selected');
+let Searchbar = document.getElementById('SearchBar');
+ReturnBTN.style.display = "none";
+
 let Listings = [
     {
         "Name": "ETCzuki",
@@ -20,16 +31,6 @@ let Listings = [
         "Address": "0x36935F7D0Ee6cCb7f54f77517704A612067B3647"
     }
 ];
-let CollectionSelected = false;
-
-let ReturnBTN = document.getElementById('ReturnBTN');
-let ChainText = document.getElementById('Ticker');
-let Boxes = document.getElementById('Boxes');
-let CollectionInput = document.getElementById('CollectionInput');
-let DappHeader = document.getElementById('Header');
-let SelectedHeader = document.getElementById('Selected');
-let Searchbar = document.getElementById('SearchBar');
-ReturnBTN.style.display = "none";
 
 
 let accountInterval = setInterval(function() {
