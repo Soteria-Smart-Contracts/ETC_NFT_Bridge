@@ -56,6 +56,7 @@ async function loginWithEth(){
         window.web3 = await new Web3(ethereum);
         await getID();
         SwitchChainHeader();
+        console.log("hello")
         accountarray = await web3.eth.getAccounts();
         contract = new window.web3.eth.Contract(BridgeABI, contractAddress, window.web3);
         account = accountarray[0];
@@ -85,7 +86,6 @@ async function getID(){
 }
 
 async function SwitchChainHeader(){
-    console.log("hello")
     if(netID === 5){
         ChainText.innerText = " Goerli - ID 5"
     }
