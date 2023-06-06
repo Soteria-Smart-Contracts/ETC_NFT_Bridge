@@ -116,7 +116,7 @@ async function Unselect(){
     Searchbar.style.display = "";
     ReturnBTN.style.display = "none";
     SelectedHeader.innerHTML = '';
-    DappHeader.innerText = "";
+    DappHeader.innerText = "Select a collection to bridge, or add a new one";
 }
 
 async function Search(){
