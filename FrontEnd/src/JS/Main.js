@@ -51,20 +51,20 @@ async function SiteUpdate(){
 
 async function loginWithEth(){
     if(LoggedIn == false){
-    if(window.ethereum){
-        await ethereum.request({ method: 'eth_requestAccounts' });
-        window.web3 = await new Web3(ethereum);
-        await getID();
-        SwitchChainHeader();
-        console.log("hello")
-        accountarray = await web3.eth.getAccounts();
-        contract = new window.web3.eth.Contract(BridgeABI, contractAddress, window.web3);
-        account = accountarray[0];
-        console.log('Logged In')
-        LoggedIn = true;
-    } else { 
-        alert("No ETHER Wallet available")
-    }
+        if(window.ethereum){
+            await ethereum.request({ method: 'eth_requestAccounts' });
+            window.web3 = await new Web3(ethereum);
+            await getID();
+            SwitchChainHeader();
+            console.log("hello")
+            accountarray = await web3.eth.getAccounts();
+            contract = new window.web3.eth.Contract(BridgeABI, contractAddress, window.web3);
+            account = accountarray[0];
+            console.log('Logged In')
+            LoggedIn = true;
+        } else { 
+            alert("No ETHER Wallet available")
+        }
     }
 }
 
