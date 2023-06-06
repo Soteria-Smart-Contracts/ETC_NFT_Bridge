@@ -110,6 +110,8 @@ async function Selected(Collection){
     DappHeader.innerText = "Which token would you like to bridge?";
 }
 
+async 
+
 async function Search(){
     if(CollectionInput.value != ""){
         Boxes.style.display = "";
