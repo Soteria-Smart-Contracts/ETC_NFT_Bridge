@@ -116,7 +116,7 @@ async function Unselect(){
     Searchbar.style.display = "";
     ReturnBTN.style.display = "none";
     SelectedHeader.innerHTML = '';
-    DappHeader.innerText = "Which token would you like to bridge?";
+    DappHeader.innerText = "";
 }
 
 async function Search(){
