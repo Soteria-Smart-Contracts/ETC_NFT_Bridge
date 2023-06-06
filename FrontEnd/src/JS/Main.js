@@ -44,7 +44,7 @@ async function SiteUpdate(){
         //do we need this
     }
     if(netID != await getID()){
-        console.log("Hi")
+        console.log("Chain switched")
         loginWithEth();
     }
 }
