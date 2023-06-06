@@ -85,6 +85,7 @@ async function getID(){
 }
 
 async function SwitchChainHeader(){
+    console.log("hello")
     if(netID === 5){
         ChainText.innerText = " Goerli - ID 5"
     }
