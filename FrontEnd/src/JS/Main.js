@@ -112,7 +112,7 @@ async function Selected(Collection){
 }
 
 async function Unselect(){
-
+    CollectionSelected = false;
 }
 
 async function Search(){
