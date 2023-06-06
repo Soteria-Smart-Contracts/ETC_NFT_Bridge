@@ -105,7 +105,7 @@ async function SwitchChainHeader(){
 async function Selected(Collection){
     CollectionSelected = true;
     Searchbar.style.display = "none";
-    ReturnBTN.style.display
+    ReturnBTN.style.display = "";
     let CollectionLink = ("https://blockscout.com/etc/mainnet/token/" + Collection.Address + "/token-transfers")
     SelectedHeader.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + CollectionLink + "'>" + Collection.Name + "</a>");
     DappHeader.innerText = "Which token would you like to bridge?";
