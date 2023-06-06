@@ -1,6 +1,6 @@
 
 const contractAddress = "0xf5c9e57e177B4F5CCfCb13b18e4154774E917401";
-const ABI = window.abi;
+const BridgeABI = window.BridgeABI;
 const Chainlist = window.Chainlist;
 let account;
 let Results;
@@ -53,7 +53,7 @@ async function loginWithEth(){
         await getID();
         SwitchChainHeader();
         accountarray = await web3.eth.getAccounts();
-        contract = new window.web3.eth.Contract(ABI, contractAddress, window.web3);
+        contract = new window.web3.eth.Contract(BridgeABI, contractAddress, window.web3);
         account = accountarray[0];
         console.log('Logged In')
         LoggedIn = true;
