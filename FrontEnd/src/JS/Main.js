@@ -27,6 +27,7 @@ let Boxes = document.getElementById('Boxes');
 let CollectionInput = document.getElementById('CollectionInput');
 let DappHeader = document.getElementById('Header');
 let SelectedHeader = document.getElementById('Selected');
+let Searchbar = document.getElementById('SearchBar');
 
 
 let accountInterval = setInterval(function() {
