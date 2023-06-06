@@ -1,4 +1,4 @@
-window.abi = [
+window.Bridge = [
 	{
 		"anonymous": false,
 		"inputs": [
