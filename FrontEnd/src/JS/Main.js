@@ -23,7 +23,7 @@ let Listings = [
 let CollectionSelected = false;
 
 
-document.getElementById('ReturnBTN').display = 'none';
+document.getElementById('ReturnBTN').style.display = 'none';
 let ChainText = document.getElementById('Ticker');
 let Boxes = document.getElementById('Boxes');
 let CollectionInput = document.getElementById('CollectionInput');
