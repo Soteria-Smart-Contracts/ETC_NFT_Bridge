@@ -22,8 +22,6 @@ let Listings = [
 ];
 let CollectionSelected = false;
 
-
-document.getElementById('ReturnBTN').style.display = "none";
 let ReturnBTN = document.getElementById('ReturnBTN');
 let ChainText = document.getElementById('Ticker');
 let Boxes = document.getElementById('Boxes');
@@ -31,6 +29,7 @@ let CollectionInput = document.getElementById('CollectionInput');
 let DappHeader = document.getElementById('Header');
 let SelectedHeader = document.getElementById('Selected');
 let Searchbar = document.getElementById('SearchBar');
+ReturnBTN.style.display = "none";
 
 
 let accountInterval = setInterval(function() {
