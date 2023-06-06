@@ -111,7 +111,7 @@ async function Selected(Collection){
     DappHeader.innerText = "Which token would you like to bridge?";
 }
 
-async function Unselect{
+async function Unselect(){
 
 }
 
