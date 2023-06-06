@@ -43,7 +43,7 @@ async function SiteUpdate(){
     if(CollectionSelected){
         //do we need this
     }
-    if(netID != await getID();){
+    if(netID != await getID()){
         
     }
 }
