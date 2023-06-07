@@ -109,6 +109,8 @@ async function SwitchChainHeader(){
 }
 
 async function Selected(Collection){
+
+    
     
     CollectionSelected = true;
     Searchbar.style.display = "none";
