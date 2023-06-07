@@ -2,7 +2,7 @@
 const contractAddress = "0xf5c9e57e177B4F5CCfCb13b18e4154774E917401";
 const BridgeABI = window.BridgeABI;
 const Chainlist = window.Chainlist;
-let Bridge;
+let BridgeContract;
 let 
 let account;
 let Results;
