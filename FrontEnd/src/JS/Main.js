@@ -109,6 +109,7 @@ async function Selected(Collection){
     Searchbar.style.display = "none";
     ReturnBTN.style.display = "";
     let CollectionLink = ("https://blockscout.com/etc/mainnet/token/" + Collection.Address + "/token-transfers")
+    SelectedHeader
     SelectedHeader.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + CollectionLink + "'>" + Collection.Name + "</a>");
     DappHeader.innerText = "Which token would you like to bridge?";
     IDinputBox.style.display = "";
@@ -119,6 +120,7 @@ async function Unselect(){
     Searchbar.style.display = "";
     ReturnBTN.style.display = "none";
     SelectedHeader.innerHTML = '';
+    SelectedHeader.style.display = "none";
     IDinputBox.style.display = "none";
     DappHeader.innerText = "Select a collection to bridge, or add a new one";
     CollectionInput.value = '';
