@@ -119,7 +119,7 @@ async function Unselect(){
     Searchbar.style.display = "";
     ReturnBTN.style.display = "none";
     SelectedHeader.innerHTML = '';
-    IDinputBox.style.display = 
+    IDinputBox.style.display = "none";
     DappHeader.innerText = "Select a collection to bridge, or add a new one";
     CollectionInput.value = '';
     Boxes.innerHTML = '';
