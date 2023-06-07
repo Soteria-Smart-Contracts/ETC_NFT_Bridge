@@ -110,7 +110,8 @@ async function SwitchChainHeader(){
 
 async function Selected(Collection){
 
-    if(Collection.includes("0x") && CollectionInput.value.length == 42){
+    if(Collection.includes("0x") && Collection.length == 42){
+    }
     
     CollectionSelected = true;
     Searchbar.style.display = "none";
