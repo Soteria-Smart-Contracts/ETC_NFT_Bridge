@@ -122,7 +122,8 @@ async function Selected(Collection){
     DappHeader.innerText = "Which token would you like to bridge?";
     IDinputBox.style.display = "";
     if(NFTContract === 0){
-    NFTContract = new window.web3.eth.Contract(ERC721abi, Collection.Address, window.web3);
+        NFTContract = new window.web3.eth.Contract(ERC721abi, Collection.Address, window.web3);
+    }
 }
 
 async function Unselect(){
