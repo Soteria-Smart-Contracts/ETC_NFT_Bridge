@@ -3,7 +3,7 @@ window.BridgeABI = [
 ]
 
 window.ERC721 = [
-	[
+	
 		{
 			"inputs": [
 				{
@@ -730,7 +730,6 @@ window.ERC721 = [
 			"stateMutability": "payable",
 			"type": "function"
 		}
-	]
 ]
 
 window.ChainList = [
