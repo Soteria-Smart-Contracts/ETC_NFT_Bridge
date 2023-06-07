@@ -113,14 +113,14 @@ async function Selected(Collection){
         NFTContract = new window.web3.eth.Contract(ERC721abi, Collection.Address, window.web3);
     }
    
-        CollectionSelected = true;
-        Searchbar.style.display = "none";
-        ReturnBTN.style.display = "";
-        let CollectionLink = ("https://blockscout.com/etc/mainnet/token/" + Collection.Address + "/token-transfers")
-        SelectedHeader.style.display = "";
-        SelectedHeader.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + CollectionLink + "'>" + Collection.Name + "</a>");
-        DappHeader.innerText = "Which token would you like to bridge?";
-        IDinputBox.style.display = "";
+    CollectionSelected = true;
+    Searchbar.style.display = "none";
+    ReturnBTN.style.display = "";
+    let CollectionLink = ("https://blockscout.com/etc/mainnet/token/" + Collection.Address + "/token-transfers")
+    SelectedHeader.style.display = "";
+    SelectedHeader.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + CollectionLink + "'>" + Collection.Name + "</a>");
+    DappHeader.innerText = "Which token would you like to bridge?";
+    IDinputBox.style.display = "";
     }
     NFTContract = new window.web3.eth.Contract(ERC721abi, Collection.Address, window.web3);
 }
