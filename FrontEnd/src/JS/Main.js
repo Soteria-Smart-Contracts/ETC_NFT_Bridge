@@ -1,7 +1,7 @@
 
 const BridgeAddress = "0xf5c9e57e177B4F5CCfCb13b18e4154774E917401";
 const BridgeABI = window.BridgeABI;
-const ERC721abi = window.
+const ERC721abi = window.ERC721;
 const Chainlist = window.Chainlist;
 let BridgeContract;
 let NFTContract;
