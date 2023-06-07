@@ -1,6 +1,7 @@
 
 const BridgeAddress = "0xf5c9e57e177B4F5CCfCb13b18e4154774E917401";
 const BridgeABI = window.BridgeABI;
+const 
 const Chainlist = window.Chainlist;
 let BridgeContract;
 let NFTContract;
