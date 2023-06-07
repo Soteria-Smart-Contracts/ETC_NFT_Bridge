@@ -111,7 +111,7 @@ async function SwitchChainHeader(){
 async function Selected(Collection){
 
     if(Collection.includes("0x") && Collection.length == 42){
-        console.log(Collection);
+        
     }
     else{
         CollectionSelected = true;
