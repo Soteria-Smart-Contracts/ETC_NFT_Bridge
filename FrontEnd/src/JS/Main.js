@@ -108,7 +108,7 @@ async function SwitchChainHeader(){
     
 }
 
-async function Selected(Collection){
+async function Selected(Collection,New){
     if(Collection.length == 42){
         
         NFTContract = new window.web3.eth.Contract(ERC721abi, Collection, window.web3);
@@ -147,7 +147,7 @@ async function Search(){
     if(CollectionInput.value != ""){
         Boxes.style.display = "";
         if(CollectionInput.value.includes("0x") && CollectionInput.value.length == 42){
-            Boxes.innerHTML = ("<a onclick='Selected(" + CollectionInput.value + ")'>" + "ERC721 at address " + CollectionInput.value + "</a>");
+            Boxes.innerHTML = ("<a onclick='Selected(" + CollectionInput.value + ",true)'>" + "ERC721 at address " + CollectionInput.value + "</a>");
         }
         else{
             Results = await SearchListings(CollectionInput.value);
