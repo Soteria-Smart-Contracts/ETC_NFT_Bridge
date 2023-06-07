@@ -109,7 +109,7 @@ async function Selected(Collection){
     Searchbar.style.display = "none";
     ReturnBTN.style.display = "";
     let CollectionLink = ("https://blockscout.com/etc/mainnet/token/" + Collection.Address + "/token-transfers")
-    SelectedHeader
+    SelectedHeader.style.display = "";
     SelectedHeader.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + CollectionLink + "'>" + Collection.Name + "</a>");
     DappHeader.innerText = "Which token would you like to bridge?";
     IDinputBox.style.display = "";
