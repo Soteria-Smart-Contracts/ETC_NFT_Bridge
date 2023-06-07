@@ -112,7 +112,7 @@ async function Selected(Collection){
     if(Collection.includes("0x") && Collection.length == 42){
         NFTContract = new window.web3.eth.Contract(ERC721abi, Collection, window.web3);
         Collection.Address = Collection;
-        
+        Collection.Name = 
     }
    
     CollectionSelected = true;
