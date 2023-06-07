@@ -147,7 +147,7 @@ async function Search(){
     if(CollectionInput.value != ""){
         Boxes.style.display = "";
         if(CollectionInput.value.includes("0x") && CollectionInput.value.length == 42){
-            
+            Stringed = 
             Boxes.innerHTML = ("<a onclick='Selected(" + CollectionInput.value + ",true)'>" + "ERC721 at address " + CollectionInput.value + "</a>");
         }
         else{
