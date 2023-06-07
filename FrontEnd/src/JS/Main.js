@@ -4,7 +4,7 @@ const BridgeABI = window.BridgeABI;
 const ERC721abi = window.ERC721;
 const Chainlist = window.Chainlist;
 let BridgeContract;
-let NFTContract;
+let NFTContract = 0;
 let account;
 let Results;
 let netID;
@@ -121,7 +121,7 @@ async function Selected(Collection){
     SelectedHeader.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + CollectionLink + "'>" + Collection.Name + "</a>");
     DappHeader.innerText = "Which token would you like to bridge?";
     IDinputBox.style.display = "";
-    
+    if 
     NFTContract = new window.web3.eth.Contract(ERC721abi, Collection.Address, window.web3);
 }
 
