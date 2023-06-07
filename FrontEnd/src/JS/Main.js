@@ -18,6 +18,7 @@ let Searchbar = document.getElementById('SearchBar');
 let IDinputBox = document.getElementById('IDinputBox');
 ReturnBTN.style.display = "none";
 IDinputBox.style.display = "none";
+SelectedHeader.style.display = "none";
 
 let Listings = [
     {
