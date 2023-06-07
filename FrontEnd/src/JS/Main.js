@@ -116,6 +116,8 @@ async function Selected(Collection){
     SelectedHeader.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + CollectionLink + "'>" + Collection.Name + "</a>");
     DappHeader.innerText = "Which token would you like to bridge?";
     IDinputBox.style.display = "";
+
+    
 }
 
 async function Unselect(){
