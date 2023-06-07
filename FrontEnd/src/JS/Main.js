@@ -121,7 +121,7 @@ async function Selected(Collection){
     SelectedHeader.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + CollectionLink + "'>" + Collection.Name + "</a>");
     DappHeader.innerText = "Which token would you like to bridge?";
     IDinputBox.style.display = "";
-    if(NFTContract =)
+    if(NFTContract === 0){
     NFTContract = new window.web3.eth.Contract(ERC721abi, Collection.Address, window.web3);
 }
 
