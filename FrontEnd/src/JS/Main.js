@@ -113,15 +113,15 @@ async function Selected(Collection){
     if(Collection.includes("0x") && Collection.length == 42){
         console.log(Collection);
     }
-    
-    CollectionSelected = true;
-    Searchbar.style.display = "none";
-    ReturnBTN.style.display = "";
-    let CollectionLink = ("https://blockscout.com/etc/mainnet/token/" + Collection.Address + "/token-transfers")
-    SelectedHeader.style.display = "";
-    SelectedHeader.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + CollectionLink + "'>" + Collection.Name + "</a>");
-    DappHeader.innerText = "Which token would you like to bridge?";
-    IDinputBox.style.display = "";
+    else{}
+        CollectionSelected = true;
+        Searchbar.style.display = "none";
+        ReturnBTN.style.display = "";
+        let CollectionLink = ("https://blockscout.com/etc/mainnet/token/" + Collection.Address + "/token-transfers")
+        SelectedHeader.style.display = "";
+        SelectedHeader.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + CollectionLink + "'>" + Collection.Name + "</a>");
+        DappHeader.innerText = "Which token would you like to bridge?";
+        IDinputBox.style.display = "";
 
     NFTContract = new window.web3.eth.Contract(ERC721abi, Collection.Address, window.web3);
 }
