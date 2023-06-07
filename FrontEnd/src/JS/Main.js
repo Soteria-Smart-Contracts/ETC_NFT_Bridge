@@ -117,7 +117,7 @@ async function Selected(Collection){
     DappHeader.innerText = "Which token would you like to bridge?";
     IDinputBox.style.display = "";
 
-    NFTContract
+    NFTContract = 
 }
 
 async function Unselect(){
@@ -131,7 +131,7 @@ async function Unselect(){
     CollectionInput.value = '';
     Boxes.innerHTML = '';
 
-    NFTContract = 
+    NFTContract = 0;
 }
 
 async function Search(){
