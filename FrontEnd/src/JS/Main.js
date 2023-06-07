@@ -139,7 +139,7 @@ async function Search(){
     if(CollectionInput.value != ""){
         Boxes.style.display = "";
         if(CollectionInput.value.includes("0x") && CollectionInput.value.length == 42){
-            Boxes.innerHTML = ("<a onclick='Selected(" + JSON.stringify(Results[index]) + ")'>" + "ERC721 at address " + CollectionInput.value + "</a>");
+            Boxes.innerHTML = ("<a onclick='Selected(" + CollectionInput + ")'>" + "ERC721 at address " + CollectionInput.value + "</a>");
         }
         else{
             Results = await SearchListings(CollectionInput.value);
