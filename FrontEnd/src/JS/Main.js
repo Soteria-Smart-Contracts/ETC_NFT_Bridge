@@ -130,6 +130,8 @@ async function Selected(Collection, New){
     }
 }
 
+async function IsOwned
+
 async function Unselect(){
     CollectionSelected = false;
     Searchbar.style.display = "";
