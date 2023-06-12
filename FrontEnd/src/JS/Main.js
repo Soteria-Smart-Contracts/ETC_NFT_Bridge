@@ -132,7 +132,9 @@ async function Selected(Collection, New){
 
 async function IsOwner(){
     ID = IDinputBox.value;
-    if(NFTContract.methods.ownerOf(ID).call() == )
+    if(NFTContract.methods.ownerOf(ID).call() == account){
+        return(true)
+    }
 }
 
 async function Unselect(){
