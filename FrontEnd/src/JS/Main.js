@@ -19,6 +19,7 @@ let DappHeader = document.getElementById('Header');
 let SelectedHeader = document.getElementById('Selected');
 let Searchbar = document.getElementById('SearchBar');
 let IDinputBox = document.getElementById('IDinputBox');
+let IDinput = document.getElementById('Input');
 ReturnBTN.style.display = "none";
 IDinputBox.style.display = "none";
 SelectedHeader.style.display = "none";
