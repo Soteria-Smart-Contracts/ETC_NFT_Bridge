@@ -130,7 +130,9 @@ async function Selected(Collection, New){
     }
 }
 
-async function IsOwner(uint256)
+async function IsOwner(){
+    
+}
 
 async function Unselect(){
     CollectionSelected = false;
