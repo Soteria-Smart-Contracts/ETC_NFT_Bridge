@@ -115,7 +115,7 @@ async function Selected(Collection, New){
         Collection = {"Name":"", "Address":""}
         Collection.Address = Collection;
         Collection.Name = await NFTContract.methods.name().call();
-        console.log(Collection.Name, Collection.Address);
+        console.log(Collection);
     }
     CollectionSelected = true;
     Searchbar.style.display = "none";
