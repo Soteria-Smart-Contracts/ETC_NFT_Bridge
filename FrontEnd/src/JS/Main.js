@@ -10,6 +10,7 @@ let Results;
 let netID;
 let LoggedIn = false;
 let CollectionSelected = false;
+let Collection;
 
 let ReturnBTN = document.getElementById('ReturnBTN');
 let ChainText = document.getElementById('Ticker');
