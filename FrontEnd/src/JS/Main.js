@@ -135,6 +135,7 @@ async function IsOwner(){
     ID = parseInt(IDinput.value);
     if(await NFTContract.methods.ownerOf(ID).call() == account){
         console.log("This fucker owns that NFT");
+        
         return(true)
     }
     else{
