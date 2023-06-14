@@ -85,7 +85,6 @@ async function SearchListings(input){
          if (Listings[i].Name.toLowerCase().includes(input.toLowerCase())){
              Results.push(Listings[i]);
             } 
-    
     } 
     return Results;  
 } 
