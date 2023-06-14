@@ -138,7 +138,7 @@ async function IsOwner(){
         return(true)
     }
     else{
-        console.log("This fucker does not that NFT")
+        console.log("This fucker does not own that NFT")
         return(false);
     }
 }
