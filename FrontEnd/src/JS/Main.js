@@ -53,7 +53,7 @@ loginWithEth();  //MAKE RE-OCCURING
 
 async function SiteUpdate(){
     let accountarray = await web3.eth.getAccounts();
-    
+    account = accountarray[0];
     if(CollectionSelected){
         //do we need this
     }
