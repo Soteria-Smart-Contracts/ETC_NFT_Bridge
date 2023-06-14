@@ -52,6 +52,7 @@ loginWithEth();  //MAKE RE-OCCURING
 //DONT FORGOT TRY MULTICHAIN API???
 
 async function SiteUpdate(){
+    accountarray = await web3.eth.getAccounts();
     if(CollectionSelected){
         //do we need this
     }
