@@ -132,6 +132,10 @@ async function Selected(Collection, New){
     }
 }
 
+async function GoodToGo(){
+    
+}
+
 async function IsOwner(){
     ID = parseInt(IDinput.value);
     console.log(await NFTContract.methods.ownerOf(ID).call())
