@@ -133,7 +133,7 @@ async function Selected(Collection, New){
 
 async function IsOwner(){
     ID = parseInt(IDinput.value);
-    console.log(await NFTContract.methods.ownerOf(ID).call()
+    console.log(await NFTContract.methods.ownerOf(ID).call())
     if(await NFTContract.methods.ownerOf(ID).call() == account){
         console.log("This fucker owns that NFT");
         return(true)
