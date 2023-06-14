@@ -69,7 +69,7 @@ async function loginWithEth(bypass){
             window.web3 = await new Web3(ethereum);
             await getID();
             SwitchChainHeader();
-            accountarray = await web3.eth.getAccounts();
+            let accountarray = await web3.eth.getAccounts();
             BridgeContract = new window.web3.eth.Contract(BridgeABI, BridgeAddress, window.web3);
             account = accountarray[0];
             console.log('Logged In')
