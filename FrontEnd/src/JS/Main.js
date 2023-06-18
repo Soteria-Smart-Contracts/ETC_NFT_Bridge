@@ -1,5 +1,5 @@
 
-const BridgeAddress = "0x3a2C6006F3E326e05eff576043e0a4E0Eb69D80f";
+const BridgeAddress = "0x7c81982eCba8c7FbBE89C4a428ab9e3F02927d45";
 const BridgeABI = window.BridgeABI;
 const ERC721abi = window.ERC721;
 const Chainlist = window.Chainlist;
@@ -60,7 +60,7 @@ async function SiteUpdate(){
     if(netID != await getID()){
         console.log("Chain switched")
         await loginWithEth(true);
-        
+
     }
 }
 
