@@ -239,8 +239,9 @@ async function ReturnToIDinput(){
 }
 
 async function SelectID(ID){
-    if(ID != SelectedDest)
-    document.getElementById(SelectedDest).className = "NetworkOption";
+    if(ID != SelectedDest){
+        document.getElementById(SelectedDest).className = "NetworkOption";
+}
     document.getElementById(ID).className = "NetworkOption clicked";
     SelectedDest = ID;
 }
