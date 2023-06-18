@@ -106,7 +106,7 @@ async function SwitchChainHeader(){
     }
     else{
         ChainText.innerText = " Unsupported Chain - ID " + netID;
-        
+        Searchbar.style.display = "none";
     }
     
 }
