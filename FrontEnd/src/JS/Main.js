@@ -243,7 +243,7 @@ async function SelectID(ID){
         document.getElementById(ID).className = "NetworkOption clicked";
     }
     else{
-        document.getElementById(SelectedDest).className
+        document.getElementById(SelectedDest).className = "NetworkOption";
         document.getElementById(ID).className = "NetworkOption clicked";
         SelectedDest = ID;
     }   
