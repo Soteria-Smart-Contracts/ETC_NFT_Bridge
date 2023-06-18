@@ -7,6 +7,7 @@ let NFTContract = 0;
 let account;
 let Results;
 let netID;
+let SelectedDest;
 let LoggedIn = false;
 let CollectionSelected = false;
 
