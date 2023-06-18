@@ -35,7 +35,7 @@ body{
 .NetworkOption{
     font-size: larger;
     padding: 15px;
-    width: ;
+    max-width: 10%;
     background-color: #bebebe;
 }
 
