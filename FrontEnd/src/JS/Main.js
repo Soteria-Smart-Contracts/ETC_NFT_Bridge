@@ -283,6 +283,7 @@ async function SelectID(ID){
     else{
         document.getElementById(SelectedDest).className = "NetworkOption";
         document.getElementById(ID).className = "NetworkOption clicked";
+        ConfirmBTN.style.display = '';
         SelectedDest = ID;
     }   
 }
