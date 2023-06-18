@@ -242,6 +242,8 @@ async function ReturnToIDinput(){
     NetworkSelect.style.display = "none";
 }
 
+async function Confirm()
+
 async function SelectID(ID){
     if(SelectedDest == undefined){  
         document.getElementById(ID).className = "NetworkOption clicked";
