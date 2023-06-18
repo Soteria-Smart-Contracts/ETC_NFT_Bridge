@@ -224,6 +224,7 @@ async function GoToChainSelection(){
     DappHeader.innerText = "Select a Destination chain";
     NextStep.style.display = "none";
     IDinputRes.innerHTML = "";
+    NetworkSelect.style.display = "";
 }
 
 async function ReturnToIDinput(){
