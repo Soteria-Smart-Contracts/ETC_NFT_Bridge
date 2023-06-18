@@ -100,9 +100,12 @@ async function getID(){
 async function SwitchChainHeader(){
     if(netID === 5){
         ChainText.innerText = " Goerli - ID 5"
+        
     }
     else if(netID === 61){
         ChainText.innerText = " Ethereum Classic - ID 61"
+        Searchbar.style.display = "none";
+        DappHeader.innerText = "This chain is not supported yet!"
     }
     else{
         ChainText.innerText = " Unsupported Chain - ID " + netID;
