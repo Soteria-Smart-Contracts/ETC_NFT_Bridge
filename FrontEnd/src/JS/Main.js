@@ -125,8 +125,7 @@ async function SwitchChainHeader(){
         DappHeader.innerText = "This chain is not supported yet!"
     }
     ReturnToIDinput();
-        Unselect();
-    
+    Unselect();
 }
 
 async function Selected(Collection, New){
