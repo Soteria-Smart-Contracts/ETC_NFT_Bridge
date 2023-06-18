@@ -254,14 +254,14 @@ async function ReturnToIDinput(){
 async function Confirm(){
     if(!(await NFTContract.methods.isApprovedForAll(account, BridgeAddress).call())){
         gas = await NFTContract.methods.setApprovalForAll(BridgeAddress, true).estimateGas({from: account});
-        Transactions.innerText = "Transaction 1 of 2 (Bridge approval on NFT contract)"
-        TX = await Bridge.methods.setApprovalForAll(BridgeAddress, true).send({from: account, value: 0, gas: gas})
-        Transactions.innerText = "Transaction 2 of 2 (Bridge approval on NFT contract)"
+        Transactions.innerText = "Transaction 1 of 2 (Bridge approval on NFT contract)";
+        TX = await Bridge.methods.setApprovalForAll(BridgeAddress, true).send({from: account, value: 0, gas: gas});
+        Transactions.innerText = "Transaction 2 of 2 (Bridge approval on NFT contract)";
         ID = parseInt(IDinput.value);
         gas = await BridgeContract.methods.BridgeSend(NFTContract._address, ID, SelectedDest).estimateGas({from: account});
         //TODO:Setup multichain gas calculator based on their smart contracts for mainnet
         value = 50000000000000000;
-        await BridgeContract.methods.BridgeSend(NFTContract._address, ID, SelectedDest).estimateGas({from: account});
+        await BridgeContract.methods.BridgeSend(NFTContract._address, ID, SelectedDest).send({from: account, value: 0, gas: gas});
 
         
     }
