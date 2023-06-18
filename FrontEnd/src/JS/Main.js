@@ -242,7 +242,9 @@ async function ReturnToIDinput(){
     NetworkSelect.style.display = "none";
 }
 
-async function Confirm()
+async function Confirm(){
+    
+}
 
 async function SelectID(ID){
     if(SelectedDest == undefined){  
