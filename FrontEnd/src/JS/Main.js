@@ -239,6 +239,7 @@ async function ReturnToIDinput(){
     let Name = await NFTContract.methods.name().call()
     let CollectionLink = ("https://blockscout.com/etc/mainnet/token/" + NFTContract._address + "/token-transfers")
     SelectedHeader.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + CollectionLink + "'>" + Name + "</a>");
+    NetworkSelect.style.display = "none";
 }
 
 async function SelectID(ID){
