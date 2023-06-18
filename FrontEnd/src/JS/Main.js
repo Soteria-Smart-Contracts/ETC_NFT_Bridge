@@ -262,6 +262,7 @@ async function Confirm(){
         //TODO:Setup multichain gas calculator based on their smart contracts for mainnet
         value = 50000000000000000;
         
+
         
     }
     else{
