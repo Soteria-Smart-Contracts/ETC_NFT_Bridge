@@ -29,6 +29,7 @@ ReturnBTN.style.display = "none";
 IDinputBox.style.display = "none";
 SelectedHeader.style.display = "none";
 NextStep.style.display = "none";
+ConfirmBTN.style.display = "none";
 
 let Listings = [
     {
