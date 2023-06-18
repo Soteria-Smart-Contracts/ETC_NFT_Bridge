@@ -239,5 +239,5 @@ async function ReturnToIDinput(){
 }
 
 async function SelectID(ID){
-    getElementById(ID).
+    document.getElementById(ID).className
 }
