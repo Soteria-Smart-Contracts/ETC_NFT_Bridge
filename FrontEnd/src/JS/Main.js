@@ -23,6 +23,7 @@ let IDinput = document.getElementById('Input');
 let IDinputRes = document.getElementById('InputResultText');
 let NextStep = document.getElementById('NextStep');
 let NetworkSelect = document.getElementById('NetworkSelect');
+let Confirm = document.getElementById('NextStep');
 NetworkSelect.style.display = "none";
 ReturnBTN.style.display = "none";
 IDinputBox.style.display = "none";
@@ -243,7 +244,7 @@ async function ReturnToIDinput(){
 }
 
 async function Confirm(){
-    
+
 }
 
 async function SelectID(ID){
