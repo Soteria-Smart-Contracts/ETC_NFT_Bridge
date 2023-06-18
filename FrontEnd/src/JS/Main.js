@@ -51,7 +51,7 @@ let accountInterval = setInterval(function() {
 
 loginWithEth();  //MAKE RE-OCCURING
 
-//DONT FORGOT TRY MULTICHAIN API???
+//TODO: DONT FORGOT TRY MULTICHAIN API???
 
 async function SiteUpdate(){
     let accountarray = await web3.eth.getAccounts();
