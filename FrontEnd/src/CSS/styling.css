@@ -35,7 +35,8 @@ body{
 .NetworkOption{
     font-size: larger;
     padding: 15px;
-    background-color: bebebe;
+    width: ;
+    background-color: #bebebe;
 }
 
 .CollectionInput{
