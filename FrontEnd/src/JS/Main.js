@@ -252,9 +252,9 @@ async function Confirm(){
         gas = await NFTContract.methods.setApprovalForAll(BridgeAddress, true).estimateGas({from: account});
         Transactions.innerText = "Transaction 1 of 2 (Bridge approval on NFT contract)"
         TX = await NFTContract.methods.setApprovalForAll(BridgeAddress, true).send({from: account, value: 0, gas: gas})
+        
     }
     console.log("This happened")
-    Transactions.innerText = "Transaction 2 of 2 (Bridge approval on NFT contract)"
 }
 
 async function SelectID(ID){
