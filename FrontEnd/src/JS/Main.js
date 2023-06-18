@@ -246,7 +246,7 @@ async function ReturnToIDinput(){
 }
 
 async function Confirm(){
-    if(!NFTContract.methods.isApprovedForAll(BridgeAddress, account)){
+    if(await !NFTContract.methods.isApprovedForAll(BridgeAddress, account).call()){
         gas = NFTContract.methods.setApprovalForAll(BridgeAddress, true)
     }
 }
