@@ -122,7 +122,7 @@ async function SwitchChainHeader(){
 }
 
 async function Selected(Collection, New){
-    if(New == true){
+    if(New == true){ //
         Address = String(Collection);
         NFTContract = new window.web3.eth.Contract(ERC721abi, Address, window.web3);
         Collection = {"Name":"", "Address":""}
