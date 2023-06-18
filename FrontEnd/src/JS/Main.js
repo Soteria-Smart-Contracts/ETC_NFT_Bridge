@@ -251,7 +251,7 @@ async function SelectID(ID){
     if(SelectedDest == undefined){  
         document.getElementById(ID).className = "NetworkOption clicked";
         SelectedDest = ID;
-        Confirm.
+        Confirm.style.display = '';
     }
     else{
         document.getElementById(SelectedDest).className = "NetworkOption";
