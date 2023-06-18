@@ -239,5 +239,5 @@ async function ReturnToIDinput(){
 }
 
 async function SelectID(ID){
-    document.getElementById(ID).className = 
+    document.getElementById(ID).className = "NetworkOption clicked";
 }
