@@ -242,6 +242,7 @@ async function ReturnToIDinput(){
     DappHeader.innerText = "Enter the token ID you would like to bridge";
     NextStep.style.display = "none";
     IDinputRes.innerHTML = "";
+    SelectedTokenID = 0;
     let Name = await NFTContract.methods.name().call()
     let CollectionLink = ("https://blockscout.com/etc/mainnet/token/" + NFTContract._address + "/token-transfers")
     SelectedHeader.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + CollectionLink + "'>" + Name + "</a>");
