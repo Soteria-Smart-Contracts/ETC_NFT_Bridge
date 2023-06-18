@@ -243,6 +243,7 @@ async function ReturnToIDinput(){
     let CollectionLink = ("https://blockscout.com/etc/mainnet/token/" + NFTContract._address + "/token-transfers")
     SelectedHeader.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + CollectionLink + "'>" + Name + "</a>");
     NetworkSelect.style.display = "none";
+    ConfirmBTN.style.display = 'none';
 }
 
 async function Confirm(){
