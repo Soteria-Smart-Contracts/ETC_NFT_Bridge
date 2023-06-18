@@ -132,7 +132,7 @@ async function Selected(Collection, New){
     CollectionSelected = true;
     Searchbar.style.display = "none";
     ReturnBTN.style.display = "";
-    let CollectionLink = ("https://blockscout.com/etc/mainnet/token/" + Collection.Address + "/token-transfers")
+    let CollectionLink = ("https://blockscout.com/etc/mainnet/token/" + Collection.Address + "/token-transfers") //TODO: Fix links not on ETC
     SelectedHeader.style.display = "";
     SelectedHeader.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + CollectionLink + "'>" + Collection.Name + "</a>");
     DappHeader.innerText = "Enter the token ID you would like to bridge";
