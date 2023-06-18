@@ -241,9 +241,10 @@ async function ReturnToIDinput(){
 async function SelectID(ID){
     if(SelectedDest == undefined){  
         document.getElementById(ID).className = "NetworkOption clicked";
+        SelectedDest = ID;
     }
     else{
-        document.getElementById(SelectedDest).className = "";
+        document.getElementById(SelectedDest).className = "NetworkOption";
         document.getElementById(ID).className = "NetworkOption clicked";
         SelectedDest = ID;
     }   
