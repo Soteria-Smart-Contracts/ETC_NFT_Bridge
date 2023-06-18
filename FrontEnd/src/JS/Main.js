@@ -105,12 +105,12 @@ async function SwitchChainHeader(){
     }
     else if(netID === 61){
         ChainText.innerText = " Ethereum Classic - ID 61"
-        Searchbar.style.display = "none";
+        Searchbar.style.display = "";
         DappHeader.innerText = "Select a collection to bridge, or add a new one"
     }
     else if(netID === 97){
         ChainText.innerText = " Test BSC - ID 97"
-        Searchbar.style.display = "none";
+        Searchbar.style.display = "";
         DappHeader.innerText = "Select a collection to bridge, or add a new one"
     }
     else{
