@@ -226,7 +226,6 @@ async function GoToChainSelection(){
     IDinputBox.style.display = "none";
     SelectedHeader.style.display = "";
     SelectedHeader.innerHTML += "<br><a>Selected ID: "+ parseInt(IDinput.value);
-    IDinput.value = '';
     DappHeader.innerText = "Select a Destination chain";
     NextStep.style.display = "none";
     IDinputRes.innerHTML = "";
