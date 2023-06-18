@@ -42,6 +42,7 @@ body{
     max-width: 35%;
     background-color: #bebebe;
     border: 3px solid black;
+    border-radius: 20px;
 }
 
 .CollectionInput{
