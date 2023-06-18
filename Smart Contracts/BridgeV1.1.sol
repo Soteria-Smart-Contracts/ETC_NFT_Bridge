@@ -1,6 +1,6 @@
 //SPDX-License-Identifier:UNLICENSE
 //For those trying to deploy this contract on multiple chains, it is designed to be the same address on 
-//all chains by deploying on the same nonce from the same address for all chains. Please modify if you want to use a different system. (We may publish that too)
+//all chains by deploying on the same nonce from the same address for all chains. Please see V1 for alternative setup (or modify to your liking)
 pragma solidity ^0.8.19;
 
 contract NFTBridgeV1{
