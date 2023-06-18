@@ -43,7 +43,7 @@ body{
     background-color: #bebebe;
     border: 3px solid black;
     border-radius: 20px;
-    onclick
+    cursor: pointer;
 }
 
 .NetworkOption.clicked{
