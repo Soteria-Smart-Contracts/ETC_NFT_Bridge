@@ -239,7 +239,7 @@ async function ReturnToIDinput(){
 }
 
 async function SelectID(ID){
-    if(ID != SelectedDest){
+    if(SelectedDest == 0){
         
     }
     document.getElementById(ID).className = "NetworkOption clicked";
