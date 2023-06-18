@@ -154,6 +154,7 @@ async function Unselect(){
     Searchbar.style.display = "";
     IDinputRes.innerHTML = "";
     ReturnBTN.style.display = "none";
+    SelectedTokenID = 0;
     SelectedHeader.innerHTML = '';
     SelectedHeader.style.display = "none";
     IDinputBox.style.display = "none";
