@@ -8,6 +8,7 @@ let account;
 let Results;
 let netID;
 let SelectedDest;
+let SelectedTokenID;
 let LoggedIn = false;
 let CollectionSelected = false;
 
