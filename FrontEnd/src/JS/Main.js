@@ -238,3 +238,6 @@ async function ReturnToIDinput(){
     SelectedHeader.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + CollectionLink + "'>" + Name + "</a>");
 }
 
+async function SelectID(ID){
+    
+}
