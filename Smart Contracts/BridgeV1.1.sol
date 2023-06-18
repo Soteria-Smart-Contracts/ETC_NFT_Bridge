@@ -6,11 +6,11 @@ pragma solidity ^0.8.19;
 contract NFTBridgeV1{
     //Variable Declarations
     address public Operator = msg.sender; //Only has the ability to add new chains
-    address public BridgeContract;
+    address public BridgeContract = address(this);
 
     //Anycall Setup
-    address public AnycallExec = 0x240630342a15CF382c81B5d914C7B90Ded4499A0; //TODO: Set address
-    address public AnycallDest = 0xfCea2c562844A7D385a7CB7d5a79cfEE0B673D99; //TODO: Set address
+    address public AnycallExec = address(0); //TODO on Launch: Set address
+    address public AnycallDest = 0x965f84D915a9eFa2dD81b653e3AE736555d945f4; //TODO on Launch: Set address
 
     //Create all bridged NFT list for frontend
     address[] public BridgedERC721s;
