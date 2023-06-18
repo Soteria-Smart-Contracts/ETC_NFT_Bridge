@@ -226,6 +226,7 @@ async function GoToChainSelection(){
     NextStep.style.display = "none";
     IDinputRes.innerHTML = "";
     NetworkSelect.style.display = "";
+    document.getElementById(SelectedDest).className = "NetworkOption";
 }
 
 async function ReturnToIDinput(){
