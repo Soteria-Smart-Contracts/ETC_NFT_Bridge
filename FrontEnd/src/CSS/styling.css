@@ -28,6 +28,14 @@ body{
     cursor: pointer;
 }
 
+.NetworkContainer{
+
+}
+
+.NetworkOption{
+    
+}
+
 .CollectionInput{
     min-width: 30vw;
     max-width: 30vw;
