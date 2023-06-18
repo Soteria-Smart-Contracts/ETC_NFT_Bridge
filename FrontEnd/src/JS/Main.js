@@ -160,6 +160,7 @@ async function Unselect(){
     IDinputBox.style.display = "none";
     DappHeader.innerText = "Select a collection to bridge, or add a new one";
     CollectionInput.value = '';
+    IDinput.value = '';
     Boxes.innerHTML = '';
 
     NFTContract = 0;
