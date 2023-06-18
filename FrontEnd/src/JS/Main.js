@@ -108,6 +108,11 @@ async function SwitchChainHeader(){
         Searchbar.style.display = "none";
         DappHeader.innerText = "Select a collection to bridge, or add a new one"
     }
+    else if(netID === 97){
+        ChainText.innerText = " Ethereum Classic - ID 61"
+        Searchbar.style.display = "none";
+        DappHeader.innerText = "Select a collection to bridge, or add a new one"
+    }
     else{
         ChainText.innerText = " Unsupported Chain - ID " + netID;
         Searchbar.style.display = "none";
