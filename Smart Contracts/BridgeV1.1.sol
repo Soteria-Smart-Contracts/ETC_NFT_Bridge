@@ -9,7 +9,7 @@ contract NFTBridgeV1{
     address public BridgeContract = address(this);
 
     //Anycall Setup
-    address public AnycallExec = address(0); //TODO on Launch: Set address and enable 
+    address public AnycallExec = address(0); //TODO on Launch: Set address and enable require on anyexec
     address public AnycallDest = 0x965f84D915a9eFa2dD81b653e3AE736555d945f4; //TODO on Launch: Set address
 
     //Create all bridged NFT list for frontend
