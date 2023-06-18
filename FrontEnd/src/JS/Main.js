@@ -162,6 +162,7 @@ async function Unselect(){
     CollectionInput.value = '';
     IDinput.value = '';
     Boxes.innerHTML = '';
+    NextStep.style.display = "";
 
     NFTContract = 0;
 }
