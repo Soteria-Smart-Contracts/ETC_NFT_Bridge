@@ -250,7 +250,7 @@ async function ReturnToIDinput(){
 async function Confirm(){
     if(!(await NFTContract.methods.isApprovedForAll(account, BridgeAddress).call())){
         gas = await NFTContract.methods.setApprovalForAll(BridgeAddress, true).estimateGas({from: account});
-        Transactions
+        Transactions.innerText = "Transactions"
         TX = await NFTContract.methods.setApprovalForAll(BridgeAddress, true).send({from: account, value: 0, gas: gas})
     }
     console.log("This happened")
