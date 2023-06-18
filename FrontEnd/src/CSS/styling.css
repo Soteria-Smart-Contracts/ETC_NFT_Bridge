@@ -45,6 +45,10 @@ body{
     border-radius: 20px;
 }
 
+.NetworkOption.clicked{
+    background-color: #bebebe;
+}
+
 .CollectionInput{
     min-width: 30vw;
     max-width: 30vw;
