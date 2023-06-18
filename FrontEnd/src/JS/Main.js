@@ -246,7 +246,9 @@ async function ReturnToIDinput(){
 }
 
 async function Confirm(){
-    if(NFTContract.methods.isApprovedForAll(BridgeAddress, account) )
+    if(!NFTContract.methods.isApprovedForAll(BridgeAddress, account)){
+        
+    }
 }
 
 async function SelectID(ID){
