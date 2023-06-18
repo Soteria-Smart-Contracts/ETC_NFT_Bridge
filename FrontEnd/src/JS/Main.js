@@ -122,11 +122,15 @@ async function SwitchChainHeader(){
         ChainText.innerText = " Test BSC - ID 97"
         Searchbar.style.display = "";
         DappHeader.innerText = "Select a collection to bridge, or add a new one"
+        ReturnToIDinput();
+        Unselect();
     }
     else{
         ChainText.innerText = " Unsupported Chain - ID " + netID;
         Searchbar.style.display = "none";
         DappHeader.innerText = "This chain is not supported yet!"
+        ReturnToIDinput();
+        Unselect();
     }
     
 }
