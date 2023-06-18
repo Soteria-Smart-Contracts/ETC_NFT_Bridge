@@ -21,7 +21,7 @@
         <h2 id="Header">Select a collection to bridge, or add a new one</h2>
         <h3 id="Selected"></h3>
         <div id="ReturnBTN">
-            <button onclick="Unselect()">Return</button>
+            <button id="Return" onclick="Unselect()">Return</button>
             <br>
             <br>
         </div>
@@ -31,10 +31,12 @@
             </div>
         </div>
         <div class="DropdownBox" id="IDinputBox">
-            <input class="CollectionInput" oninput="IsOwner()" id="Input" placeholder="Enter the token ID that you would like to bridge"></input>
-            <div id="Boxes" style="display: none;">
-            </div>
+            <input class="CollectionInput" oninput="ValidateID()" id="Input" type="number" placeholder="Enter the token ID that you would like to bridge">
         </div>
+        <span id="InputResultText"></span>
+        <br>
+        <br>
+        <button class="Next" onclick="GoToChainSelection()" id="NextStep">Next</button>
         <br>
     </div> 
     <br>

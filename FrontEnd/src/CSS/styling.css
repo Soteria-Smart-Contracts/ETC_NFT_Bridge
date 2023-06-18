@@ -16,6 +16,18 @@ body{
     border-radius: 20px;
 }
 
+.Next{
+    background-color: rgb(41, 243, 0);
+    font-size: large;
+    font-weight: bold;
+    padding: 0.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 .CollectionInput{
     min-width: 30vw;
     max-width: 30vw;

@@ -1,5 +1,5 @@
 
-const BridgeAddress = "0xf5c9e57e177B4F5CCfCb13b18e4154774E917401";
+const BridgeAddress = "0x3a2C6006F3E326e05eff576043e0a4E0Eb69D80f";
 const BridgeABI = window.BridgeABI;
 const ERC721abi = window.ERC721;
 const Chainlist = window.Chainlist;
@@ -20,9 +20,12 @@ let SelectedHeader = document.getElementById('Selected');
 let Searchbar = document.getElementById('SearchBar');
 let IDinputBox = document.getElementById('IDinputBox');
 let IDinput = document.getElementById('Input');
+let IDinputRes = document.getElementById('InputResultText');
+let NextStep = document.getElementById('NextStep');
 ReturnBTN.style.display = "none";
 IDinputBox.style.display = "none";
 SelectedHeader.style.display = "none";
+NextStep.style.display = "none";
 
 let Listings = [
     {
@@ -54,12 +57,10 @@ loginWithEth();  //MAKE RE-OCCURING
 async function SiteUpdate(){
     let accountarray = await web3.eth.getAccounts();
     account = accountarray[0];
-    if(CollectionSelected){
-        //do we need this
-    }
     if(netID != await getID()){
         console.log("Chain switched")
         await loginWithEth(true);
+        
     }
 }
 
@@ -117,7 +118,6 @@ async function Selected(Collection, New){
         Collection = {"Name":"", "Address":""}
         Collection.Address = Address;
         Collection.Name = await NFTContract.methods.name().call();
-        console.log(Collection);
     }
     CollectionSelected = true;
     Searchbar.style.display = "none";
@@ -125,33 +125,17 @@ async function Selected(Collection, New){
     let CollectionLink = ("https://blockscout.com/etc/mainnet/token/" + Collection.Address + "/token-transfers")
     SelectedHeader.style.display = "";
     SelectedHeader.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + CollectionLink + "'>" + Collection.Name + "</a>");
-    DappHeader.innerText = "Which token would you like to bridge?";
+    DappHeader.innerText = "Enter the token ID you would like to bridge";
     IDinputBox.style.display = "";
     if(NFTContract === 0){
         NFTContract = new window.web3.eth.Contract(ERC721abi, Collection.Address, window.web3);
     }
 }
 
-async function GoodToGo(){
-    
-}
-
-async function IsOwner(){
-    ID = parseInt(IDinput.value);
-    console.log(await NFTContract.methods.ownerOf(ID).call())
-    if(await NFTContract.methods.ownerOf(ID).call() == account){
-        console.log("This fucker owns that NFT");
-        return(true)
-    }
-    else{
-        console.log("This fucker does not own that NFT")
-        return(false);
-    }
-}
-
 async function Unselect(){
     CollectionSelected = false;
     Searchbar.style.display = "";
+    IDinputRes.innerHTML = "";
     ReturnBTN.style.display = "none";
     SelectedHeader.innerHTML = '';
     SelectedHeader.style.display = "none";
@@ -189,4 +173,56 @@ async function Search(){
     else{
         Boxes.style.display = "none";
     }
+}
+
+async function ValidateID(){
+    ID = parseInt(IDinput.value);
+    if(isNaN(ID) || ID === 0){
+        IDinputRes.innerHTML = "";
+        return;
+    }
+    let owner;
+    try {
+        owner = await NFTContract.methods.ownerOf(ID).call();
+    } catch (error) {
+        console.log("Ignore the above error as it is just the result of a non existant token");
+        NextStep.style.display = "none";
+        IDinputRes.innerHTML = "<br><br> Invalid token ID (Does not exist)";
+        return;
+    }
+    if(owner == account){
+        IDinputRes.innerHTML = "<br><br> Token ID Valid";
+        NextStep.style.display = "";
+        return(true)
+    }
+    else{
+        IDinputRes.innerHTML = "<br><br> Invalid token ID (Not owner)";
+        NextStep.style.display = "none";
+        return(false);
+    }
+}
+
+async function GoToChainSelection(){
+    ReturnBTN.innerHTML = '<button id="Return" onclick="ReturnToIDinput()">Return</button><br><br>';
+    IDinputBox.style.display = "none";
+    SelectedHeader.style.display = "";
+    SelectedHeader.innerHTML += "<br><a>Selected ID: "+ parseInt(IDinput.value);
+    IDinput.value = '';
+    DappHeader.innerText = "Select a Destination chain";
+    NextStep.style.display = "none";
+    IDinputRes.innerHTML = "";
+}
+
+async function ReturnToIDinput(){
+    ReturnBTN.innerHTML = '<button id="Return" onclick="Unselect()">Return</button><br><br>';
+    IDinputBox.style.display = "";
+    SelectedHeader.style.display = "";
+    SelectedHeader.innerHTML += "<br><a>Selected ID: "+ parseInt(IDinput.value);
+    IDinput.value = '';
+    DappHeader.innerText = "Enter the token ID you would like to bridge";
+    NextStep.style.display = "none";
+    IDinputRes.innerHTML = "";
+    let Name = await NFTContract.methods.name().call()
+    let CollectionLink = ("https://blockscout.com/etc/mainnet/token/" + NFTContract._address + "/token-transfers")
+    SelectedHeader.innerHTML = ("Selected collection: " + "<a target='_blank' href='" + CollectionLink + "'>" + Name + "</a>");
 }

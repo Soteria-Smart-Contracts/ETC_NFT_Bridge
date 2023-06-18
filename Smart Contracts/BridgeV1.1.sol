@@ -1,9 +1,12 @@
 //SPDX-License-Identifier:UNLICENSE
+//For those trying to deploy this contract on multiple chains, it is designed to be the same address on 
+//all chains by deploying on the same nonce from the same address for all chains. Please modify if you want to use a different system. (We may publish that too)
 pragma solidity ^0.8.19;
 
 contract NFTBridgeV1{
     //Variable Declarations
     address public Operator = msg.sender; //Only has the ability to add new chains
+    address public BridgeContract;
 
     //Anycall Setup
     address public AnycallExec = 0x240630342a15CF382c81B5d914C7B90Ded4499A0; //TODO: Set address
@@ -19,7 +22,6 @@ contract NFTBridgeV1{
     mapping(address => bool) public IsBridgeContract;
     mapping(address => bool) public IsSourceContract;
     mapping(uint256 => bool) public AvailDestinations;
-    mapping(uint256 => address) public ExtBridgeContracts;
 
     struct NFTinfo{
         uint256 OriginChain;
@@ -83,7 +85,7 @@ contract NFTBridgeV1{
           revert('Unable to Bridge NFT, contact operator');
         }
 
-        AnyCall(AnycallDest).anyCall{value: msg.value}(ExtBridgeContracts[Destination], abi.encode(Request), Destination, 0, '');
+        AnyCall(AnycallDest).anyCall{value: msg.value}(BridgeContract, abi.encode(Request), Destination, 0, '');
         emit ERC721BridgeDeparture(Collection, ID, Destination, msg.sender);
 
         return(success);
@@ -120,11 +122,10 @@ contract NFTBridgeV1{
 
     //Operator Only
 
-    function AddNewBridgeChain(uint256 ChainID, address BridgeContract) public returns(bool success){
+    function AddNewBridgeChain(uint256 ChainID) public returns(bool success){
         require(msg.sender == Operator);
 
         AvailDestinations[ChainID] = true;
-        ExtBridgeContracts[ChainID] = BridgeContract;
 
         emit NewChainAdded(ChainID, BridgeContract);
         return(success);
