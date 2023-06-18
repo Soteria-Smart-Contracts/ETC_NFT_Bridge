@@ -259,6 +259,7 @@ async function Confirm(){
         TX = await Bridge.methods.setApprovalForAll(BridgeAddress, true).send({from: account, value: 0, gas: gas})
         Transactions.innerText = "Transaction 2 of 2 (Bridge approval on NFT contract)"
         ID = parseInt(IDinput.value);
+        
     }
     else{
 
