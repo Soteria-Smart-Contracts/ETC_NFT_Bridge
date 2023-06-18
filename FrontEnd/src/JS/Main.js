@@ -24,7 +24,7 @@ let IDinputRes = document.getElementById('InputResultText');
 let NextStep = document.getElementById('NextStep');
 let NetworkSelect = document.getElementById('NetworkSelect');
 let ConfirmBTN = document.getElementById('Confirm');
-let Transactio
+let TransactionInfo = document.getElementById('Transactions');
 NetworkSelect.style.display = "none";
 ReturnBTN.style.display = "none";
 IDinputBox.style.display = "none";
