@@ -246,7 +246,7 @@ async function ReturnToIDinput(){
 }
 
 async function Confirm(){
-    if(NFT)
+    if(NFTContract.methods.i)
 }
 
 async function SelectID(ID){
