@@ -138,6 +138,7 @@ async function Selected(Collection, New){
             Collection.Name = await NFTContract.methods.name().call()
         } catch (error) {
             console.log("No nft here buddy")
+            return;
         };
     }
     CollectionSelected = true;
