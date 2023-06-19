@@ -68,7 +68,7 @@ async function SiteUpdate(){
         console.log("Chain switched")
         await loginWithEth(true);
         if(OngoingTX){
-            
+
         }
     }
 }
@@ -285,6 +285,8 @@ async function Confirm(){
         OngoingTX = true;
     }
 }
+
+async func
 
 async function SelectID(ID){
     if(SelectedDest == undefined){  
