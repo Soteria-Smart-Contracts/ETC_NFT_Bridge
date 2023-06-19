@@ -267,10 +267,10 @@ async function Confirm(){
         Transactions.innerText = "Transaction 1 of 1 (Bridge Request)";
         ID = parseInt(IDinput.value);
         console.log(ID);
-        gas = await BridgeContract.methods.BridgeSend(NFTContract._address, ID, SelectedDest).estimateGas({from: account});
+        gas = await BridgeContract.methods.BridgeSend(NFTContract._address, ID, SelectedDest).estimateGas({from: account, value: value});
         //TODO:Setup multichain gas calculator based on their smart contracts for mainnet
         value = 500000000000000000;
-        await BridgeContract.methods.BridgeSend(NFTContract._address, ID, SelectedDest).send({from: account, value: value, gas: 210000});
+        await BridgeContract.methods.BridgeSend(NFTContract._address, ID, SelectedDest).send({from: account, value: value, gas: gas});
     }
     
 }
