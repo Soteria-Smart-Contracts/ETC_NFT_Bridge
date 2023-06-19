@@ -137,7 +137,7 @@ async function Selected(Collection, New){
         try {
             Collection.Name = await NFTContract.methods.name().call()
         } catch (error) {
-            console.log("No nft here buddy")
+            IDinputRes.innerText = "Unav"
             return;
         };
     }
