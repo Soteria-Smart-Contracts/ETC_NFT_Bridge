@@ -278,9 +278,8 @@ async function Confirm(){
         gas = await BridgeContract.methods.BridgeSend(NFTContract._address, ID, SelectedDest).estimateGas({from: account, value: value});
         //TODO:Setup multichain gas calculator based on their smart contracts for mainnet
         await BridgeContract.methods.BridgeSend(NFTContract._address, ID, SelectedDest).send({from: account, value: value, gas: gas});
-        IDinputRes.innerHTML = "Token bridge successful, awaiting receipt on destination chain";
+        IDinputRes.innerHTML = "Token bridge successful, switch network to destination chain";
     }
-    
 }
 
 async function SelectID(ID){
