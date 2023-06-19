@@ -288,7 +288,7 @@ async function Confirm(){
 
 async function AwaitReceipt(){
     console.log("Waiting");
-    eventFilter = bridgeContract.events.ERC721BridgeArrival();
+    eventFilter = BridgeContract.events.ERC721BridgeArrival();
 }
 
 async function SelectID(ID){
