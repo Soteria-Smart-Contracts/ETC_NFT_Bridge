@@ -134,7 +134,9 @@ async function Selected(Collection, New){
         NFTContract = new window.web3.eth.Contract(ERC721abi, Address, window.web3);
         Collection = {"Name":"", "Address":""}
         Collection.Address = Address;
-        Collection.Name = await NFTContract.methods.name().call();
+        Collection.Name = try {
+            
+        } catch (error) {;
     }
     CollectionSelected = true;
     Searchbar.style.display = "none";
