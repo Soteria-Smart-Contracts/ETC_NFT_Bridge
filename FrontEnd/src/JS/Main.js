@@ -288,7 +288,9 @@ async function Confirm(){
 
 async function AwaitReceipt(){
     console.log("Waiting");
-    eventFilter = BridgeContract.events.ERC721BridgeArrival();
+    PastEvents = BridgeContract.getPastEvents("ERC721BridgeArrival", {fromBlock: 0,
+        toBlock: 'latest',
+      })
 }
 
 async function SelectID(ID){
