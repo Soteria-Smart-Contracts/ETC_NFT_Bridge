@@ -287,7 +287,6 @@ async function Confirm(){
 }
 
 async function AwaitReceipt(){
-    console.log("Waiting");
     PastEvents = BridgeContract.getPastEvents("ERC721BridgeArrival", {fromBlock: 0,toBlock: 'latest'})
 }
 
