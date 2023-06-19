@@ -280,6 +280,7 @@ async function Confirm(){
         //TODO:Setup multichain gas calculator based on their smart contracts for mainnet
         await BridgeContract.methods.BridgeSend(NFTContract._address, ID, SelectedDest).send({from: account, value: value, gas: gas});
         IDinputRes.innerHTML = "Token bridge successful, switch network to destination chain";
+        OngoingTX = true;
     }
 }
 
