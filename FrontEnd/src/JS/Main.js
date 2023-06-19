@@ -286,7 +286,9 @@ async function Confirm(){
     }
 }
 
-async func
+async function AwaitReceipt(){
+    console.log("Waiting");
+}
 
 async function SelectID(ID){
     if(SelectedDest == undefined){  
