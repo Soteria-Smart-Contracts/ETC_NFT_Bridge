@@ -63,7 +63,7 @@ async function SiteUpdate(){
         console.log("Chain switched")
         await loginWithEth(true);
         if(OngoingTX){
-            setInterval(AwaitReceipt(), );
+            setInterval(AwaitReceipt(), 2000);
         }
     }
 }
