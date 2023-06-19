@@ -283,6 +283,7 @@ async function Confirm(){
 
 async function AwaitReceipt(){
     PastEvents = BridgeContract.getPastEvents("ERC721BridgeArrival", {fromBlock: 0,toBlock: 'latest'})
+    
 }
 
 async function SelectID(ID){
