@@ -229,7 +229,7 @@ async function GoToChainSelection(){
     SelectedHeader.innerHTML += "<br><a>Selected ID: "+ parseInt(IDinput.value);
     DappHeader.innerText = "Select a Destination chain";
     NextStep.style.display = "none";
-    docu)
+    document.getElementById(parseInt(IDinput.value))
     IDinputRes.innerHTML = "";
     NetworkSelect.style.display = "";
     document.getElementById(SelectedDest).className = "NetworkOption";
