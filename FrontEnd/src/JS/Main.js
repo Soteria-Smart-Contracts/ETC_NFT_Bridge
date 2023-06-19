@@ -173,6 +173,7 @@ async function Unselect(){
 }
 
 async function Search(){
+    IDinputRes.innerHTML = '';
     if(CollectionInput.value != ""){
         Boxes.style.display = "";
         if(CollectionInput.value.includes("0x") && CollectionInput.value.length == 42){
