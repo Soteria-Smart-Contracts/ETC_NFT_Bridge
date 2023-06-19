@@ -135,8 +135,9 @@ async function Selected(Collection, New){
         Collection = {"Name":"", "Address":""}
         Collection.Address = Address;
         Collection.Name = try {
-            
-        } catch (error) {;
+            await NFTContract.methods.name().call()
+        } catch (error) {
+        };
     }
     CollectionSelected = true;
     Searchbar.style.display = "none";
