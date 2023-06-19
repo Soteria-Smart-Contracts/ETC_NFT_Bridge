@@ -137,7 +137,7 @@ async function Selected(Collection, New){
         try {
             Collection.Name = await NFTContract.methods.name().call()
         } catch (error) {
-            IDinputRes.innerText = "Unav"
+            IDinputRes.innerText = "Unable to locate ERC721 contract at address "
             return;
         };
     }
