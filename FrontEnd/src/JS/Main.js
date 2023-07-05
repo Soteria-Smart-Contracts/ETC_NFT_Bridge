@@ -76,7 +76,7 @@ async function loginWithEth(bypass){
 
 async function UpdateListings(){
     let index = 0;
-    let ListedAddresses = await BridgeContract.methods.BridgedERC721sFullArray().call;
+    let ListedAddresses = await BridgeContract.methods.BridgedERC721sFullArray().call();
     while(index < ListedAddresses.length){
         let TempContract = new window.web3.eth.Contract(ERC721abi, ListedAddresses[index], window.web3);
         let Name = await TempContract.methods.Name().call;
