@@ -4,6 +4,7 @@ const BridgeABI = window.BridgeABI;
 const ERC721abi = window.ERC721;
 let BridgeContract;
 let NFTContract = 0;
+let TempContract;
 let account;
 let Results;
 let netID;
@@ -90,7 +91,7 @@ async function UpdateListings(){
     let index = 0;
     let ListedAddresses = await BridgeContract.methods.BridgedERC721sFullArray().call;
     while(index < ListedAddresses.length){
-        
+
         let Name = await BridgeContract.methods.BridgedERC721s(ListedAddresses[index]).call;
         let Collection = {"Name":Name, "Address":ListedAddresses[index]}
         Listings.push(Collection);
