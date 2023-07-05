@@ -86,7 +86,8 @@ async function loginWithEth(bypass){
     }
 }
 
-async function 
+async function UpdateListings(){
+    
 
 async function SearchListings(input){
     let Results = []; 
