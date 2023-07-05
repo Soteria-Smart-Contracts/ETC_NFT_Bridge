@@ -88,7 +88,7 @@ async function loginWithEth(bypass){
 
 async function UpdateListings(){
     let index = 0;
-    let ListedAddresses = BridgeContract.methods.B
+    let ListedAddresses = BridgeContract.methods.
 }
 
 async function SearchListings(input){
