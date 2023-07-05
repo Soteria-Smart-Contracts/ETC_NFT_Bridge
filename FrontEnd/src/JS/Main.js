@@ -35,20 +35,7 @@ SelectedHeader.style.display = "none";
 NextStep.style.display = "none";
 ConfirmBTN.style.display = "none";
 
-let Listings = [
-    {
-        "Name": "ETCzuki",
-        "Address": "0x44b6ad1DcceC2A512088997766cC39D0cf3f5D12"
-    },
-    {
-        "Name": "ETCfrogB",
-        "Address": "0x5925630e4D0AB569A40E600064Da2930b4838Da3"
-    },
-    {
-        "Name": "Dreamgirls",
-        "Address": "0x36935F7D0Ee6cCb7f54f77517704A612067B3647"
-    }
-];
+let Listings = [];
 
 
 let accountInterval = setInterval(function() { if (web3.eth.accounts[0] !== account) { loginWithEth() } SiteUpdate() }, 300);
