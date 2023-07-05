@@ -86,6 +86,8 @@ async function loginWithEth(bypass){
     }
 }
 
+async function 
+
 async function SearchListings(input){
     let Results = []; 
     for (let i = 0; i < Listings.length; i++) {
