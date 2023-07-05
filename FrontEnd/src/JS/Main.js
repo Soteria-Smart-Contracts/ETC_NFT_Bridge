@@ -91,7 +91,7 @@ async function UpdateListings(){
     let index = 0;
     let ListedAddresses = await BridgeContract.methods.BridgedERC721sFullArray().call;
     while(index < ListedAddresses.length){
-
+        let TempContract = new window.web3.eth.Contract(BridgeABI, BridgeAddress, window.web3);
         let Name = await BridgeContract.methods.BridgedERC721s(ListedAddresses[index]).call;
         let Collection = {"Name":Name, "Address":ListedAddresses[index]}
         Listings.push(Collection);
