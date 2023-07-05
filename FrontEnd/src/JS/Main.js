@@ -84,6 +84,7 @@ async function UpdateListings(){
         Listings.push(Collection);
         index++;
     }
+    console.log(Listings);
 }
 
 async function SearchListings(input){
