@@ -1,5 +1,4 @@
 window.BridgeABI = [
-	[
 		{
 			"anonymous": false,
 			"inputs": [
