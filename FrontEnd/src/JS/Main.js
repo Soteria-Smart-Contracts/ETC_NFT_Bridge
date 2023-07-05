@@ -83,6 +83,7 @@ async function UpdateListings(){
         let Collection = {"Name":Name, "Address":ListedAddresses[index]}
         Listings.push(Collection);
         index++;
+        console.log()
     }
     console.log(Listings);
 }
