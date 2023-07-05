@@ -91,6 +91,11 @@ async function UpdateListings(){
     let ListedAddresses = await BridgeContract.methods.BridgedERC721sFullArray().call;
     while(index < ListedAddresses.length){
         
+        let Name = await BridgeContract.methods.BridgedERC721s(ListedAddresses[index]).call;
+        let Collection = {"Name":Name, "Address":ListedAddresses[index]}
+        Listings.push(Collection);
+        index++;
+    }
 }
 
 async function SearchListings(input){
