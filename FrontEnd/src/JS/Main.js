@@ -55,11 +55,7 @@ async function SiteUpdate(){
         }
     }
 }
-function dispatch(
-    uint32 _destinationDomain,
-    bytes32 _recipientAddress,
-    bytes calldata _messageBody
-) external returns (bytes32);
+
 
 async function loginWithEth(bypass){
     if(LoggedIn == false || bypass == true){
